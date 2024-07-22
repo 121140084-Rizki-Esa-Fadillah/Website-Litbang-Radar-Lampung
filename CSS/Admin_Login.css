@@ -19,6 +19,7 @@ body  {
 
 .login h2{
     margin-bottom: 1rem;
+    margin-top: 0;
     text-align: center;
     font-size: 22px;
 }
@@ -40,7 +41,7 @@ body  {
 
 .login input:focus {
     border-color: #0C25A3;
-    box-shadow: 0 0 0 2px rgba(12, 37, 163, 0.5); 
+    box-shadow: 0 0 0 1px #0C25A3; 
 }
 
 .login button{
@@ -61,7 +62,7 @@ body  {
 }
 
 .image_login{
-    background-color: #0C25A3;
+    background-color: #0C25A3c5;
     padding: 2rem;
     width: 25vw;
     height: 40vh;
