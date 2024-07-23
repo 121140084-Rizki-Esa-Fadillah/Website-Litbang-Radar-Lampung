@@ -1,11 +1,12 @@
-*{
+* {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+        Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 }
 
-body{
+body {
     background-color: #f0f0f0;
     display: flex;
     height: 100vh;
@@ -27,7 +28,7 @@ header {
     height: 5rem;
 }
 
-header .logo_radar img{
+header .logo_radar img {
     height: 3rem;
 }
 
@@ -37,7 +38,7 @@ header .logo_radar img{
     gap: 0.5rem;
     padding-right: 3rem;
     cursor: pointer;
-    position: relative; 
+    position: relative;
 }
 
 .akun i {
@@ -49,27 +50,27 @@ header .logo_radar img{
 }
 
 .dropdown-menu {
-    display: none; 
-    position: absolute; 
+    display: none;
+    position: absolute;
     right: 2.5rem;
     top: 2rem;
-    background-color: #F7F2FA; 
+    background-color: #f7f2fa;
     box-shadow: 0 2px 0 1px rgba(0, 0, 0, 0.1);
     border-top: 1px solid #e2e2e2;
-    border-radius: 0.25rem; 
-    z-index: 1000; 
+    border-radius: 0.25rem;
+    z-index: 1000;
     width: 15vw;
 }
 
 .dropdown-menu a {
-    display: block; 
+    display: block;
     padding: 0.75rem 1rem;
-    text-decoration: none; 
-    color: #333; 
+    text-decoration: none;
+    color: #333;
 }
 
 .dropdown-menu a:hover {
-    background-color: #e2e2e2; 
+    background-color: #e2e2e2;
     border-radius: 0.25rem;
 }
 
@@ -78,12 +79,12 @@ header .logo_radar img{
 }
 
 aside {
-    background-color: #0C25A3;
+    background-color: #0c25a3;
     color: white;
     width: 20vw;
-    height: calc(100vh - 4rem); 
+    height: calc(100vh - 4rem);
     position: fixed;
-    top: 5rem; 
+    top: 5rem;
     left: 0;
     overflow-y: auto;
 }
@@ -169,7 +170,7 @@ main {
 
 section {
     background-color: #6a77c6;
-    padding: 0.4rem; 
+    padding: 0.4rem;
     display: flex;
     align-items: center;
     gap: 1.5rem;
@@ -182,9 +183,8 @@ section i {
     color: white;
 }
 
-section h2{
+section h2 {
     font-size: 16px;
     font-weight: 600;
     color: white;
-    
 }

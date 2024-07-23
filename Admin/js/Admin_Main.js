@@ -1,4 +1,4 @@
-document.addEventListener("DOMContentLoaded", function() {
+document.addEventListener("DOMContentLoaded", function () {
     // Function to load content dynamically
     function loadContent(page) {
         fetch(page)
@@ -7,7 +7,7 @@ document.addEventListener("DOMContentLoaded", function() {
                 document.querySelector("#content").innerHTML = data;
             });
     }
-  
+
     // Function to set active link
     function setActiveLink(link) {
         document.querySelectorAll("nav ul li").forEach(li => {
@@ -15,14 +15,14 @@ document.addEventListener("DOMContentLoaded", function() {
         });
         link.parentElement.classList.add("active");
     }
-  
+
     // Load default content
     loadContent('dashboard.html');
     setActiveLink(document.querySelector("nav ul li a[href='#dashboard']"));
-  
+
     // Add event listeners to sidebar links
     document.querySelectorAll("nav ul li a").forEach(link => {
-        link.addEventListener("click", function(e) {
+        link.addEventListener("click", function (e) {
             e.preventDefault();
             const page = e.target.getAttribute("href").substring(1) + '.html';
             loadContent(page);
@@ -32,12 +32,12 @@ document.addEventListener("DOMContentLoaded", function() {
 
     // Toggle dropdown menu
     const akun = document.querySelector('.akun');
-    akun.addEventListener('click', function() {
+    akun.addEventListener('click', function () {
         this.querySelector('.dropdown').classList.toggle('active');
     });
 
     // Close the dropdown if the user clicks outside of it
-    document.addEventListener('click', function(event) {
+    document.addEventListener('click', function (event) {
         if (!akun.contains(event.target)) {
             akun.querySelector('.dropdown').classList.remove('active');
         }
@@ -45,14 +45,11 @@ document.addEventListener("DOMContentLoaded", function() {
 
     // Add event listener to the "Pengaturan Akun" link
     const settingsLink = document.querySelector("#profil-admin");
-    settingsLink.addEventListener("click", function(e) {
+    settingsLink.addEventListener("click", function (e) {
         e.preventDefault();
         loadContent('profil.html');
         setActiveLink(e.target);
     });
 
-    
-});
 
-  
-  
+});
