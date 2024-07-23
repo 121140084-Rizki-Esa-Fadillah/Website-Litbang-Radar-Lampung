@@ -51,5 +51,12 @@ document.addEventListener("DOMContentLoaded", function () {
         setActiveLink(e.target);
     });
 
+    /* Toggle sidebar visibility
+    const sidebarToggle = document.querySelector('.fa-bars');
+    const sidebar = document.querySelector('aside');
 
+    sidebarToggle.addEventListener('click', function () {
+        sidebar.classList.toggle('hidden');
+    });
+    */
 });
