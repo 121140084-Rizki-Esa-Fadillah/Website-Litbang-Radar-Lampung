@@ -36,6 +36,8 @@ header .logo_radar img{
     align-items: center;
     gap: 0.5rem;
     padding-right: 3rem;
+    cursor: pointer;
+    position: relative; 
 }
 
 .akun i {
@@ -46,19 +48,13 @@ header .logo_radar img{
     font-size: 1rem;
 }
 
-/* Tambahkan CSS ini di akhir file Admin_Dashboard.css */
-
-.akun {
-    position: relative; /* Tambahkan ini untuk mengatur posisi dropdown relatif terhadap akun */
-}
-
 .dropdown-menu {
     display: none; /* Sembunyikan menu secara default */
     position: absolute; /* Posisi absolut untuk menempatkan menu */
     right: 0; /* Letakkan menu di sisi kanan */
     background-color: #f7f2fa; /* Warna latar belakang */
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Bayangan */
-    border-radius: 4px; /* Sudut melengkung */
+    box-shadow: 0 2px 0.5rem rgba(0, 0, 0, 0.1); /* Bayangan */
+    border-radius: 0.25rem; /* Sudut melengkung */
     z-index: 1000; /* Pastikan menu muncul di atas elemen lainnya */
 }
 
