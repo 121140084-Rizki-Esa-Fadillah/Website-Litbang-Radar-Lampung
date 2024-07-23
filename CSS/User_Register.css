@@ -8,16 +8,16 @@ body  {
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
-.login{
+.registrasi{
     background-color: #cecded;
     width: 25vw;
-    height: 40vh;
+    height: 55vh;
     padding: 2rem;
-    border-radius: 0.5rem 0 0 0.5rem ;
+    border-radius: 0 0.5rem 0.5rem 0;
     text-align: center;
 }
 
-.login h2{
+.registrasi h2{
     margin-bottom: 1rem;
     margin-top: 0;
     text-align: center;
@@ -30,7 +30,17 @@ body  {
     font-size: 14px;
 }
 
-.login input{
+.login p a{
+    text-decoration: none;
+    font-weight: 500;
+    color: #0C25A3;
+}
+
+.login p a:hover{
+    color: #0C25A3c5;
+}
+
+.registrasi input{
     width: 70%;
     padding: 0.5rem;
     margin-bottom: 1rem;
@@ -44,34 +54,34 @@ body  {
     box-shadow: 0 0 0 1px #0C25A3; 
 }
 
-.login button{
+.registrasi button{
     width: 40%;
-    padding: 0.6rem;
+    padding: 0.5rem;
     background-color:#0C25A3; 
     color: white;
     border: none;
     border-radius: 0.5rem;
     cursor: pointer;
     margin-top: 0.5rem;
-    font-size: 16px;
-    font-weight: 600;
+      font-size: 16px;
+      font-weight: 600;
 }
 
-.login button:hover{
+.registrasi button:hover{
+    background-color: #0c25a3c5;
+}
+
+.image_register{
     background-color: #0C25A3;
-}
-
-.image_login{
-    background-color: #0C25A3c5;
     padding: 2rem;
     width: 25vw;
-    height: 40vh;
-    border-radius: 0 1rem 1rem 0; 
+    height: 55vh;
+    border-radius: 1rem 0 0 1rem; 
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.image_login img{
+.image_register img{
     width: 75%;
 }
