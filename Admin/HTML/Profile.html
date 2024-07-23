@@ -3,14 +3,63 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Halaman Dashboard Admin</title>
+    <link rel="stylesheet" href="..\CSS\Admin_Profile.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <script src="https://kit.fontawesome.com/ae643ea90b.js" crossorigin="anonymous"></script>
 </head>
 <body>
-      <section id="profile">
-            <i class="fa-solid fa-bars"></i>
-            <h2>Profile Admin</h2>
-            
-        </section>
-        
+    <section id="manajemen-user">
+        <i class="fa-solid fa-bars"></i>
+        <h2>Profil Admin</h2>
+    </section>
+    <div class="profile-admin">
+        <div class="foto-profile">
+            <i class="fa-solid fa-circle-user"></i>
+        </div>
+        <div class="username-status-admin">
+            <h2>Username</h2>
+            <div class="indikator-admin">
+                <span class="status-admin">Admin</span>
+            </div>
+        </div>
+    </div>
+    <div class="data-profile-admin">
+        <div>
+            <div class="nama-admin, data">
+                <strong class="sub-judul">Nama Lengkap</strong>
+                <p class="value">Admin</p>
+            </div>
+            <div class="jenis-kelamin-admin, data">
+                <strong class="sub-judul">Jenis Kelamin</strong>
+                <p class="value">Laki-laki/Perempuan</p>
+            </div>
+            <div class="password-admin, data">
+                <strong class="sub-judul">password</strong>
+                <div class="value-password">
+                    <p class="value">*********</p>
+                    <p class="tombol-edit-password">Edit</p>
+                </div>
+            </div>
+        </div>
+        <div>
+            <div class="email-admin, data">
+                <strong class="sub-judul">Email</strong>
+                <p class="value">Admin123@email.com</p>
+            </div>
+            <div class="no-telp-admin, data">
+                <strong class="sub-judul">No. Hp</strong>
+                <p class="value">081122334455</p>
+            </div>
+        </div>
+    </div>
+    <div class="edit">
+        <button class="tombol-edit">
+            <span class="material-symbols-outlined">
+                edit_square
+            </span>
+            <strong>Edit</strong>
+        </button>
+    </div>
 </body>
 </html>
