@@ -1,56 +1,62 @@
-document.addEventListener("DOMContentLoaded", function() {
-      // Function to load content dynamically
-      function loadContent(page) {
-          fetch(page)
-              .then(response => response.text())
-              .then(data => {
-                  document.querySelector("#content").innerHTML = data;
-              });
-      }
-  
-      // Function to set active link
-      function setActiveLink(link) {
-          document.querySelectorAll("nav ul li").forEach(li => {
-              li.classList.remove("active");
-          });
-          link.parentElement.classList.add("active");
-      }
-  
-      // Load default content
-      loadContent('dashboard.html');
-      setActiveLink(document.querySelector("nav ul li a[href='#dashboard']"));
-  
-      // Add event listeners to sidebar links
-      document.querySelectorAll("nav ul li a").forEach(link => {
-          link.addEventListener("click", function(e) {
-              e.preventDefault();
-              const page = e.target.getAttribute("href").substring(1) + '.html';
-              loadContent(page);
-              setActiveLink(e.target);
-          });
-      });
+document.addEventListener("DOMContentLoaded", function () {
+    // Function to load content dynamically
+    function loadContent(page) {
+        fetch(page)
+            .then(response => response.text())
+            .then(data => {
+                document.querySelector("#content").innerHTML = data;
+            });
+    }
 
-      // Toggle dropdown menu
+    // Function to set active link
+    function setActiveLink(link) {
+        document.querySelectorAll("nav ul li").forEach(li => {
+            li.classList.remove("active");
+        });
+        link.parentElement.classList.add("active");
+    }
+
+    // Load default content
+    loadContent('dashboard.html');
+    setActiveLink(document.querySelector("nav ul li a[href='#dashboard']"));
+
+    // Add event listeners to sidebar links
+    document.querySelectorAll("nav ul li a").forEach(link => {
+        link.addEventListener("click", function (e) {
+            e.preventDefault();
+            const page = e.target.getAttribute("href").substring(1) + '.html';
+            loadContent(page);
+            setActiveLink(e.target);
+        });
+    });
+
+    // Toggle dropdown menu
     const akun = document.querySelector('.akun');
-    akun.addEventListener('click', function() {
+    akun.addEventListener('click', function () {
         this.querySelector('.dropdown').classList.toggle('active');
     });
 
     // Close the dropdown if the user clicks outside of it
-    document.addEventListener('click', function(event) {
+    document.addEventListener('click', function (event) {
         if (!akun.contains(event.target)) {
             akun.querySelector('.dropdown').classList.remove('active');
         }
     });
 
     // Add event listener to the "Pengaturan Akun" link
-    const settingsLink = document.querySelector("#settings-link");
-    settingsLink.addEventListener("click", function(e) {
+    const settingsLink = document.querySelector("#profil-admin");
+    settingsLink.addEventListener("click", function (e) {
         e.preventDefault();
-        loadContent('profile.html');
+        loadContent('profil.html');
         setActiveLink(e.target);
     });
-  });
 
-  
-  
+    /* Toggle sidebar visibility
+    const sidebarToggle = document.querySelector('.fa-bars');
+    const sidebar = document.querySelector('aside');
+
+    sidebarToggle.addEventListener('click', function () {
+        sidebar.classList.toggle('hidden');
+    });
+    */
+});

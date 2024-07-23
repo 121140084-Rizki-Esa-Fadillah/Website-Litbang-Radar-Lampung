@@ -1,63 +1,64 @@
-body  {
+body {
       background-color: #f0f0f0;
       display: flex;
       justify-content: center;
       align-items: center;
       height: 100vh;
       margin: 0;
-      font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+            Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 }
-  
-.login{
+
+.login {
       background-color: #cecded;
       width: 25vw;
       height: 45vh;
       padding: 2rem;
-      border-radius: 0.5rem 0 0 0.5rem ;
+      border-radius: 0.5rem 0 0 0.5rem;
       text-align: center;
 }
-  
-.login h2{
+
+.login h2 {
       margin-bottom: 1rem;
       margin-top: 0;
       text-align: center;
       font-size: 22px;
 }
-  
-.login p{
+
+.login p {
       margin-bottom: 1rem;
       text-align: center;
       font-size: 14px;
 }
 
-.login p a{
+.login p a {
       text-decoration: none;
       font-weight: 500;
-      color: #0C25A3;
+      color: #0c25a3;
 }
 
-.login p a:hover{
-      color: #0C25A3c5;
+.login p a:hover {
+      color: #0c25a3c5;
 }
 
-.login input{
+.login input {
       width: 70%;
       padding: 0.5rem;
       margin-bottom: 1rem;
-      border: 1.5px solid #0C25A3;
-      border-radius: 0.5rem; 
+      border: 1.5px solid #0c25a3;
+      border-radius: 0.5rem;
       outline: none;
 }
-  
+
 .login input:focus {
-      border-color: #0C25A3;
-      box-shadow: 0 0 0 1px #0C25A3; 
+      border-color: #0c25a3;
+      box-shadow: 0 0 0 1px #0c25a3;
 }
-  
-.login button{
+
+.login button {
       width: 40%;
       padding: 0.6rem;
-      background-color:#0C25A3; 
+      background-color: #0c25a3;
       color: white;
       border: none;
       border-radius: 0.5rem;
@@ -66,22 +67,22 @@ body  {
       font-size: 16px;
       font-weight: 600;
 }
-  
-.login button:hover{
+
+.login button:hover {
       background-color: #0c25a3c5;
 }
-  
-.image_login{
-      background-color: #0C25A3;
+
+.image_login {
+      background-color: #0c25a3;
       padding: 2rem;
       width: 25vw;
       height: 45vh;
-      border-radius: 0 1rem 1rem 0; 
+      border-radius: 0 1rem 1rem 0;
       display: flex;
       justify-content: center;
       align-items: center;
 }
-  
-.image_login img{
+
+.image_login img {
       width: 75%;
 }
