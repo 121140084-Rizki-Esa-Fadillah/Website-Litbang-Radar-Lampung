@@ -1,36 +1,36 @@
 document.addEventListener("DOMContentLoaded", function() {
-      // Function to load content dynamically
-      function loadContent(page) {
-          fetch(page)
-              .then(response => response.text())
-              .then(data => {
-                  document.querySelector("#content").innerHTML = data;
-              });
-      }
+    // Function to load content dynamically
+    function loadContent(page) {
+        fetch(page)
+            .then(response => response.text())
+            .then(data => {
+                document.querySelector("#content").innerHTML = data;
+            });
+    }
   
-      // Function to set active link
-      function setActiveLink(link) {
-          document.querySelectorAll("nav ul li").forEach(li => {
-              li.classList.remove("active");
-          });
-          link.parentElement.classList.add("active");
-      }
+    // Function to set active link
+    function setActiveLink(link) {
+        document.querySelectorAll("nav ul li").forEach(li => {
+            li.classList.remove("active");
+        });
+        link.parentElement.classList.add("active");
+    }
   
-      // Load default content
-      loadContent('dashboard.html');
-      setActiveLink(document.querySelector("nav ul li a[href='#dashboard']"));
+    // Load default content
+    loadContent('dashboard.html');
+    setActiveLink(document.querySelector("nav ul li a[href='#dashboard']"));
   
-      // Add event listeners to sidebar links
-      document.querySelectorAll("nav ul li a").forEach(link => {
-          link.addEventListener("click", function(e) {
-              e.preventDefault();
-              const page = e.target.getAttribute("href").substring(1) + '.html';
-              loadContent(page);
-              setActiveLink(e.target);
-          });
-      });
+    // Add event listeners to sidebar links
+    document.querySelectorAll("nav ul li a").forEach(link => {
+        link.addEventListener("click", function(e) {
+            e.preventDefault();
+            const page = e.target.getAttribute("href").substring(1) + '.html';
+            loadContent(page);
+            setActiveLink(e.target);
+        });
+    });
 
-      // Toggle dropdown menu
+    // Toggle dropdown menu
     const akun = document.querySelector('.akun');
     akun.addEventListener('click', function() {
         this.querySelector('.dropdown').classList.toggle('active');
@@ -44,13 +44,15 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 
     // Add event listener to the "Pengaturan Akun" link
-    const settingsLink = document.querySelector("#settings-link");
+    const settingsLink = document.querySelector("#profil-admin");
     settingsLink.addEventListener("click", function(e) {
         e.preventDefault();
-        loadContent('profile.html');
+        loadContent('profil.html');
         setActiveLink(e.target);
     });
-  });
+
+    
+});
 
   
   

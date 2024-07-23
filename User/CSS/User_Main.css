@@ -36,6 +36,8 @@ header .logo_radar img{
     align-items: center;
     gap: 0.5rem;
     padding-right: 3rem;
+    cursor: pointer;
+    position: relative; 
 }
 
 .akun i {
@@ -44,6 +46,35 @@ header .logo_radar img{
 
 .akun .dropdown i {
     font-size: 1rem;
+}
+
+.dropdown-menu {
+    display: none; 
+    position: absolute; 
+    right: 2.5rem;
+    top: 2rem;
+    background-color: #F7F2FA; 
+    box-shadow: 0 2px 0 1px rgba(0, 0, 0, 0.1);
+    border-top: 1px solid #e2e2e2;
+    border-radius: 0.25rem; 
+    z-index: 1000; 
+    width: 15vw;
+}
+
+.dropdown-menu a {
+    display: block; 
+    padding: 0.75rem 1rem;
+    text-decoration: none; 
+    color: #333; 
+}
+
+.dropdown-menu a:hover {
+    background-color: #e2e2e2; 
+    border-radius: 0.25rem;
+}
+
+.dropdown.active .dropdown-menu {
+    display: block;
 }
 
 aside {
