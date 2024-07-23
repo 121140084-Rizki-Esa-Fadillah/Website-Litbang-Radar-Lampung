@@ -126,6 +126,10 @@ nav ul li:hover {
     background-color: #d9d9d97b;
 }
 
+nav ul li.active {
+    background-color: #d9d9d97b;
+}
+
 main {
     margin-left: 20vw;
     padding: 0;
