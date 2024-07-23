@@ -29,5 +29,28 @@ document.addEventListener("DOMContentLoaded", function() {
               setActiveLink(e.target);
           });
       });
+
+      // Toggle dropdown menu
+    const akun = document.querySelector('.akun');
+    akun.addEventListener('click', function() {
+        this.querySelector('.dropdown').classList.toggle('active');
+    });
+
+    // Close the dropdown if the user clicks outside of it
+    document.addEventListener('click', function(event) {
+        if (!akun.contains(event.target)) {
+            akun.querySelector('.dropdown').classList.remove('active');
+        }
+    });
+
+    // Add event listener to the "Pengaturan Akun" link
+    const settingsLink = document.querySelector("#settings-link");
+    settingsLink.addEventListener("click", function(e) {
+        e.preventDefault();
+        loadContent('profile.html');
+        setActiveLink(e.target);
+    });
   });
+
+  
   
