@@ -1,0 +1,81 @@
+* {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    letter-spacing: 0.5px;
+}
+
+.profile-admin {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin: 29px;
+    margin-top: 44px;
+}
+
+.profile-admin i {
+    font-size: 7rem;
+    color: #eaddff;
+}
+
+.foto-profile {
+    background-color: #0C25A3;
+    border-radius: 100%;
+}
+
+.data-profile-admin {
+    display: flex;
+    gap: 60px;
+    margin-left: 29px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label,
+.form-group input {
+    display: block;
+    width: 100%;
+    font-size: 1rem;
+}
+
+.form-group label {
+    font-weight: 600;
+}
+
+.form-group input {
+    margin-top: 5px;
+    padding: 8px;
+    box-sizing: border-box;
+    width: 18rem;
+    border-radius: 8px;
+    border: 1px solid #0C25A3;
+}
+
+.tombol {
+    margin: 60px 100px 0 29px;
+    display: flex;
+    justify-content: flex-end;
+    gap: 40px;
+}
+
+.tombol-cancel {
+    color: black;
+    font-size: 18px;
+    background-color: #D9D9D9;
+    padding:  5px 22px 5px 22px;
+    display: flex;
+    justify-content: center;
+    border-radius: 8px;
+    border: 1px solid rgba(12, 37, 163, 0.2);
+}
+
+.tombol-save {
+    color: white;
+    font-size: 18px;
+    background-color: #0C25A3;
+    padding:  5px 30px 5px 30px;
+    display: flex;
+    justify-content: center;
+    border: 1px solid rgba(12, 37, 163, 0.2);
+    border-radius: 8px;
+}
