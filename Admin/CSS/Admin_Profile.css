@@ -7,8 +7,7 @@
     display: flex;
     align-items: center;
     gap: 1rem;
-    margin: 3rem;
-    margin-top: 1.5rem;
+    margin: 1rem 0 1.5rem 2rem;
 }
 
 .profile-admin i {
@@ -23,23 +22,24 @@
 
 .data-profile-admin {
     display: flex;
-    gap: 6rem;
+    gap: 10rem;
     margin-left: 2rem;
 }
 
 .data {
     margin-top: 0.5rem;
-    margin-bottom: 10px;
+    margin-bottom: 1.5rem;
     display: grid;
-    gap: 5px;
+    gap: 0.5rem;
+    width: 150%;
 }
 
 .sub-judul {
-    font-size: 16px;;
+    font-size: 1.1rem;
 }
 
 .value {
-    font-size: 18px;
+    font-size: 1rem;
 }
 
 .value-password {
@@ -48,26 +48,30 @@
     align-items: center;
 }
 
+.value-password a {
+    color: #0C25A3;
+    font-size: 1rem;
+    text-decoration: none;
+}
+
 .password-admin {
     margin-right: 20px;
 }
 
-.tombol-edit-password {
-    color: #0C25A3;
-    font-size: 18px;
-}
-
 .edit {
-    margin: 60px 0px 0 29px;
+    margin: 2rem 0 0 2rem;
+    width: 15%;
 }
 
-.tombol-edit {
+.edit a {
     color: white;
-    font-size: 18px;
+    font-size: 1rem;
     background-color: #0C25A3;
-    padding:  8px 30px 8px 30px;
+    padding:  0.5rem 1rem;
     display: flex;
     justify-content: center;
-    border-radius: 8px;
+    border-radius: 0.5rem;
     border-width: 0;
+    text-decoration: none;
+    gap: 0.5rem;
 }
