@@ -7,6 +7,7 @@
     <title>Halaman Dashboard Admin</title>
     <link rel="stylesheet" href="..\CSS\Admin_Main.css">
     <script src="https://kit.fontawesome.com/ae643ea90b.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
 </head>
 
 <body>
@@ -45,14 +46,33 @@
                         <i class="fa-solid fa-house"></i>
                         <a href="#dashboard">Dashboard</a>
                     </li>
-                    <li>
+                    <li class="survey-toggle">
                         <i class="fa-solid fa-chart-pie"></i>
-                        <a href="#analisis-survey">Analisis Survey</a>
+                        <strong>Survey</strong>
+                        <span class="material-symbols-outlined arrow">
+                            chevron_right
+                            </span>
                     </li>
-                    <li>
-                        <i class="fa-solid fa-folder-open"></i>
-                        <a href="#hasil-survey">Hasil Survey</a>
-                    </li>
+                    <div class="dropdown-survey">
+                        <div class="survey-menu"> 
+                            <li>
+                                <div class="tambah-survey">
+                                    <span class="material-symbols-outlined">
+                                        list_alt_add
+                                        </span>
+                                    <a href="#tambah-survey">Tambah Survey</a>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="hasil-survey">
+                                    <span class="material-symbols-outlined">
+                                        description
+                                        </span>
+                                    <a href="#hasil-survey">Hasil Survey</a>
+                                </div>
+                            </li>
+                        </div>
+                    </div>
                     <li>
                         <i class="fa-solid fa-users-gear"></i>
                         <a href="#manajemen-user">Manajemen User</a>

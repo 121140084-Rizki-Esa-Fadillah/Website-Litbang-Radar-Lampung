@@ -51,12 +51,13 @@ document.addEventListener("DOMContentLoaded", function () {
         setActiveLink(e.target);
     });
 
-    /* Toggle sidebar visibility
-    const sidebarToggle = document.querySelector('.fa-bars');
-    const sidebar = document.querySelector('aside');
+    // Toggle survey dropdown
+    const surveyToggle = document.querySelector('.survey-toggle');
+    const dropdownSurvey = document.querySelector('.dropdown-survey');
+    const arrow = document.querySelector('.arrow');
 
-    sidebarToggle.addEventListener('click', function () {
-        sidebar.classList.toggle('hidden');
+    surveyToggle.addEventListener('click', function () {
+        dropdownSurvey.classList.toggle('show');
+        arrow.classList.toggle('rotate');
     });
-    */
 });
