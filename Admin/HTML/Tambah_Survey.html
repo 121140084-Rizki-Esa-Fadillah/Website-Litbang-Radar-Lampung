@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Analisis Survey</title>
+    <link rel="stylesheet" href="../CSS/Tambah_Survei.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+</head>
+
+<body>
+    <section id="analisis-survey">
+        <i class="fa-solid fa-bars"></i>
+        <h2>Analisis Data Survei</h2>
+    </section>
+    <section class="form-section">
+        <form action="#">
+            <label for="judul-survey">Judul Survey:</label>
+            <input type="text" id="judul-survey" name="judul-survey" placeholder="...">
+            
+            <label for="keterangan">Keterangan:</label>
+            <textarea id="keterangan" name="keterangan" placeholder="..."></textarea>
+            
+            <label for="upload-gambar">Upload Gambar (Optional):</label>
+            <div class="upload-section">
+                <input type="file" id="upload-gambar" name="upload-gambar" accept="image/jpeg, image/png">
+                <div class="upload-box">
+                    <img src="../../image/uplod_foto.png">
+                    <span>Drop your image here, or browse</span>
+                    <p>Support JPG or PNG</p>
+                </div>
+            </div>
+
+            <div class="form-buttons">
+                <button type="submit">Save</button>
+            </div>
+        </form>
+    </section>
+</body>
+
+</html>
