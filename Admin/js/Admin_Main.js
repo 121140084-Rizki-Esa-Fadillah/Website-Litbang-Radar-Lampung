@@ -39,12 +39,15 @@ document.addEventListener("DOMContentLoaded", function () {
         const saveButton = document.querySelector(".tombol-save");
         if (saveButton) {
             saveButton.addEventListener("click", function () {
-                if (currentPage === 'Admin-Edit-Profil.html' || currentPage === 'Admin-Edit-Password.html' || currentPage === 'Add_User.html' || currentPage === 'Edit_User.html') {
-                     // Logika untuk menyimpan data bisa ditambahkan di sini
-                    alert("Data saved!"); 
-                } else if (currentPage === 'Tambah_Survey.html') {
-                    loadContent('Input_Data_Survey.html');
-                } 
+                if (currentPage === 'Admin-Edit-Profil.html' || currentPage === 'Admin-Edit-Password.html') {
+                    alert("Data saved!");
+                    loadContent('Admin_Profile.html');
+                } else if (currentPage === 'Add_User.html' || currentPage === 'Edit_User.html') {
+                    alert("Data saved!");
+                    loadContent('Manajemen-User.html');
+                } else if (currentPage === 'Tambah_Survey_Hal1.html') {
+                    loadContent('Tambah_Survey_Hal2.html');
+                }
             });
         }
 
@@ -63,7 +66,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 loadContent('Add_User.html');
             });
         }
-        
+
         // Tambahkan event listener untuk tombol "Edit User Management"
         const editUserButton = document.querySelector(".tombol-edit-user");
         if (editUserButton) {

@@ -75,23 +75,26 @@ form textarea {
     font-size: 14px;
 }
 
-.tombol-save {
+.save {
     text-align: right;
-    margin-top: 1rem;
-    
+    margin: 1rem;
 }
 
-.tombol-save button {
-    padding: 0.5rem 2rem;
-    border: none;
-    border-radius: 0.5rem;
+.save button {
+    color: white;
+    font-size: 1rem;
     background-color: #0C25A3;
-    color: #fff;
-    cursor: pointer;
+    padding: 0.5rem 2.25rem;
+    border-radius: 0.5rem;
+    border-width: 0;
+    text-decoration: none;
+    gap: 0.5rem;
+    transition: background-color 0.3s ease, transform 0.3s ease; 
+    cursor: pointer; 
 }
 
-.tombol-save button:hover {
-    background-color: #fff;
+.save button:hover {
+    background-color: #D9D9D9; 
     color: #0C25A3;
     border: 1px solid #0C25A3;
 }
