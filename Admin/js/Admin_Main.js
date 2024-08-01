@@ -39,8 +39,12 @@ document.addEventListener("DOMContentLoaded", function () {
         const saveButton = document.querySelector(".tombol-save");
         if (saveButton) {
             saveButton.addEventListener("click", function () {
-                // Logika untuk menyimpan data bisa ditambahkan di sini
-                alert("Data saved!"); // Contoh alert, ganti dengan logika penyimpanan yang sesuai
+                if (currentPage === 'Admin-Edit-Profil.html' || currentPage === 'Admin-Edit-Password.html' || currentPage === 'Add_User.html' || currentPage === 'Edit_User.html') {
+                     // Logika untuk menyimpan data bisa ditambahkan di sini
+                    alert("Data saved!"); 
+                } else if (currentPage === 'Tambah_Survey.html') {
+                    loadContent('Input_Data_Survey.html');
+                } 
             });
         }
 

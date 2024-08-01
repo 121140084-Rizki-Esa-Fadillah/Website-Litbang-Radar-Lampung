@@ -5,30 +5,32 @@
 
 .form-section {
     background-color: #fff;
-    padding: 2rem;
+    padding: 1.25rem 2rem;
     border-radius: 0.25rem;
     box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.1);
 }
 
-.form-section h2{
+.form-section h2 {
     text-align: center;
+    margin-bottom: 1rem;
 }
 
 form label {
     display: block;
-    margin-top: 10px;
+    margin: 0.25rem 0 0.25rem 0;
     font-weight: bold;
+    font-size: 1rem;
 }
 
 form input[type="text"],
 form textarea {
     width: 100%;
-    padding: 10px;
-    margin-top: 5px;
-    margin-bottom: 15px;
+    padding: 0.5rem;
+    margin-top: 0.25rem;
+    margin-bottom: 0.5rem;
     border: 1px solid #ccc;
-    border-radius: 5px;
-    font-weight: 15px;
+    border-radius: 0.25rem;
+    font-size: 14px;
 }
 
 form textarea {
@@ -40,12 +42,11 @@ form textarea {
     flex-direction: column;
     align-items: center;
     width: 50%;
-    height: 150%;
-    padding: 20px;
-    border: 2px dashed #474747;
-    border-radius: 10px;
+    border: 1.5px dashed #474747;
+    border-radius: 0.5rem;
     background-color: #f9f9f9;
-    margin: 20px auto;
+    margin: 1rem auto;
+    cursor: pointer;
 }
 
 .upload-section input[type="file"] {
@@ -56,33 +57,41 @@ form textarea {
     text-align: center;
     display: flex;
     flex-direction: column;
+    height: 8rem;
+    justify-content: center;
 }
 
 .upload-box img {
-    width: 4rem;
-    padding-left: 40%;
+    width: 3rem;
+    margin: 0.25rem auto 0.5rem;
 }
 
 .upload-box span {
-    margin: 2px 0;
     font-weight: bold;
-    margin-top: 5%;
+    font-size: 14px;
 }
 
-.upload-box p{
-    margin: 5px 0;
+.upload-box p {
+    font-size: 14px;
 }
 
-.form-buttons {
+.tombol-save {
     text-align: right;
-    margin-top: 20px;
+    margin-top: 1rem;
+    
 }
 
-.form-buttons button {
-    padding: 12px 25px;
+.tombol-save button {
+    padding: 0.5rem 2rem;
     border: none;
-    border-radius: 8px;
+    border-radius: 0.5rem;
     background-color: #0C25A3;
     color: #fff;
     cursor: pointer;
+}
+
+.tombol-save button:hover {
+    background-color: #fff;
+    color: #0C25A3;
+    border: 1px solid #0C25A3;
 }
