@@ -4,11 +4,10 @@
 }
 
 .form-section {
-    margin-top: 20px;
     background-color: #fff;
-    padding: 20px;
-    border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 2rem;
+    border-radius: 0.25rem;
+    box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.1);
 }
 
 .form-section h2{
