@@ -46,7 +46,7 @@
     gap: 1rem;
     background-color: #0C25A3;
     color: #fff;
-    padding: 0.5rem 1rem;
+    padding: 1.5rem 1.5rem;
     border-radius: 1rem;
     text-align: center;
     width: 120%;
@@ -55,7 +55,7 @@
 }
 
 .total-survey-box i {
-    font-size: 30px;
+    font-size: 36px;
     margin-right: 10px;
     margin-left: 0;
 }
@@ -74,7 +74,134 @@
 
 .total-survey-box .total h3 {
     margin: 0;
-    font-size: 14px;
-    font-weight: normal;
+    font-size: 18px;
+    font-weight: 600;
     width: 100%;
+}
+
+.cari-container {
+    margin-top: 1.8rem;
+    margin-bottom: 1rem;
+    margin: 1.8rem 2rem 1rem 2rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 4px solid rgba(0, 0, 0, 0.3);
+}
+
+.cari-container h3 {
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+.search-sort-container {
+    display: flex;
+    align-items: center;
+    margin: 0 0.5rem;
+    justify-content: space-between;
+}
+
+.search-box {
+    display: flex;
+    align-items: center;
+    border-radius: 0.5rem;
+    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.316);
+    width: 35%;
+}
+
+.search-box input {
+    border: none;
+    padding: 0.5rem;
+    border-radius: 0.5rem 0 0 0.5rem;
+    outline: none;
+    background-color: #cac4d06c;
+    width: 100%;
+}
+
+.search-box button {
+    border: none;
+    background-color: #5769c2;
+    padding: 0.5rem 1rem;
+    border-radius: 0 0.5rem 0.5rem 0;
+    color: white;
+    cursor: pointer;
+}
+
+.search-box button i {
+    font-size: 16px;
+}
+
+.sort-box {
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+}
+
+.sort-box select {
+    border: 1px solid #000000;
+    border-radius: 4px;
+    padding: 0.5rem 5rem 0.5rem 1rem;
+    margin-left: 0.5rem;
+    outline: none;
+    cursor: pointer;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    appearance: none;
+    
+}
+
+.select-container {
+    position: relative;
+    width: 250px;
+    display: flex;
+}
+
+#sort {
+    width: 100%;
+    padding-right: 30px;
+}
+
+.arrow-select {
+    align-items: center;
+    position: absolute;
+    right: 1px; /* Sesuaikan dengan posisi yang diinginkan */
+    border-radius: 3.5px 0 0 3.5px;
+    transform: translateY(3%) rotate(180deg);
+    pointer-events: none;
+    background-color: #ced3ed;
+    padding: 4.5px 7px;
+}
+
+.hasil {
+    margin: 0 2rem;
+}
+
+.img {
+    width: 300px;
+    height: 150px;
+    background-color: #D9D9D9;
+    margin: 1.2rem 1rem 0 0;
+    border-radius: 10px;
+}
+
+.hasil-container {
+    display: flex;
+}
+
+.ket {
+    margin-top: 1rem;
+}
+
+.wilayah {
+    font-weight: 700;
+    margin: 10px 0 8px 0;
+}
+
+.ket-action {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 15px;
+    align-items: center;
+}
+
+.tanggal {
+    display: flex;
 }
