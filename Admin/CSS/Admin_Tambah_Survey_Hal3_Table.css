@@ -11,31 +11,33 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border-bottom: 2px solid #ccc;
+    border-bottom: solid 1.5px #79747E;
+    box-shadow: 0 3px rgba(0, 0, 0, 0.1);
     background-color: #f1ebf7;
-    padding: 0 0px;
-    margin-left: 20px;
-    margin-right: 16%;
+    margin: 1rem 2rem;
 }
 
 .tab-container {
     display: flex;
     background-color: #f1ebf7;
+    font-size: 14px;
 }
 
 .tab {
-    padding: 10px 20px;
+    padding: 0.5rem 1rem;
     border: none;
     background-color: #f1ebf7;
     cursor: pointer;
-    font-size: 16px;
     color: #000;
+    font-weight: 600;
 }
 
 .tab.active {
     background-color: #0C25A3;
     color: #ffffff;
-    border-radius: 4px 4px 0 0;
+    border-radius: 0.25rem 0.25rem 0 0;
+    padding: 0.5rem 1rem;
+    font-weight: 600;
 }
 
 .tab:not(.active):hover {
@@ -44,13 +46,36 @@
 
 .sort-box {
     display: flex;
-    flex-direction: column;
+    align-items: center;
     font-size: 14px;
 }
 
-.sort-box label {
-    font-weight: bold;
-    margin-bottom: 5px;
+.sort-box select {
+    border: 1px solid #000000;
+    border-radius: 4px;
+    padding: 0.5rem 5rem 0.5rem 1rem;
+    margin-left: 0.5rem;
+    outline: none;
+    cursor: pointer;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    appearance: none;
+}
+
+.select-container {
+    position: relative;
+    display: flex;
+}
+
+.arrow-select {
+    align-items: center;
+    position: absolute;
+    right: 1px; /* Sesuaikan dengan posisi yang diinginkan */
+    border-radius: 3.5px 0 0 3.5px;
+    transform: translateY(3%) rotate(180deg);
+    pointer-events: none;
+    background-color: #ced3ed;
+    padding: 4.5px 7px;
 }
 
 .tabel {
@@ -104,7 +129,7 @@ select {
     margin-top: 20px;
 }
 
-.back-button, .publish-button {
+.tombol-kembali, .tombol-publish{
     padding: 10px 20px;
     background-color: #0C25A3;
     color: white;
