@@ -9,7 +9,7 @@
       margin-bottom: 2rem;
 }
 
-.tambah-user-button a {
+.tambah-user-button button {
       display: inline-flex;
       align-items: center;
       padding: 0.5rem 1rem;
@@ -21,9 +21,11 @@
       box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
       text-decoration: none;
       margin: 0.5rem 0 0.5rem 2rem;
+      transition: background-color 0.3s ease, transform 0.3s ease; 
+    cursor: pointer; 
 }
 
-.tambah-user-button a:hover {
+.tambah-user-button button:hover {
       background-color: #f9f9f9;
       border-color: #ccc;
 }
@@ -151,9 +153,7 @@ tr:nth-child(even) {
       gap: 0.5rem;
   }
 
-  .action-buttons a,
   .action-buttons button {
-      padding: 0.25rem 0.5rem;
       border: none;
       border-radius: 5px;
       cursor: pointer;
@@ -164,16 +164,34 @@ tr:nth-child(even) {
       color: white;
   }
 
-.edit-button {
+.tombol-edit-user {
       background-color: #0056b3;
-      color: white;
+      color: #D9D9D9;
+      padding: 0.25rem 1rem;
+      transition: background-color 0.3s ease, transform 0.3s ease; 
+      cursor: pointer; 
 }
 
-.delete-button {
+.tombol-edit-user:hover {
+      background-color: #D9D9D9; 
+      color: #0056b3;
+      border: 1px solid #0C25A3;
+}
+
+.tombol-hapus-user {
       background-color: #dc3545;
-      color: white;
+      color: #D9D9D9;
+      padding: 0.25rem 0.5rem;
+      transition: background-color 0.3s ease, transform 0.3s ease; 
+      cursor: pointer; 
 }
 
-.edit-button i, .delete-button i {
+.tombol-hapus-user:hover {
+      background-color: #D9D9D9; 
+      color: #dc3545;
+      border: 1px solid #dc3545;
+}
+
+.tombol-edit-user i, .tombol-hapus-user i {
       margin-right: 0.5rem;
 }
