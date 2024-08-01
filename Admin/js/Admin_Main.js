@@ -18,7 +18,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Load default content
     loadContent('Dashboard_Admin.html');
-    setActiveLink(document.querySelector("nav ul li a[href='#dashboard']"));
+    setActiveLink(document.querySelector("nav ul li a[href='#dashboard_admin']"));
 
     // Add event listeners to sidebar links
     document.querySelectorAll("nav ul li a").forEach(link => {
@@ -51,12 +51,13 @@ document.addEventListener("DOMContentLoaded", function () {
         setActiveLink(e.target);
     });
 
-    /* Toggle sidebar visibility
-    const sidebarToggle = document.querySelector('.fa-bars');
-    const sidebar = document.querySelector('aside');
+    // Toggle survey dropdown
+    const surveyToggle = document.querySelector('.survey-toggle');
+    const dropdownSurvey = document.querySelector('.dropdown-survey');
+    const arrow = document.querySelector('.arrow');
 
-    sidebarToggle.addEventListener('click', function () {
-        sidebar.classList.toggle('hidden');
+    surveyToggle.addEventListener('click', function () {
+        dropdownSurvey.classList.toggle('show');
+        arrow.classList.toggle('rotate');
     });
-    */
 });
