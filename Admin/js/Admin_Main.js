@@ -18,7 +18,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Load default content
     loadContent('Dashboard_Admin.html');
-    setActiveLink(document.querySelector("nav ul li a[href='#dashboard']"));
+    setActiveLink(document.querySelector("nav ul li a[href='#dashboard_admin']"));
 
     // Add event listeners to sidebar links
     document.querySelectorAll("nav ul li a").forEach(link => {
