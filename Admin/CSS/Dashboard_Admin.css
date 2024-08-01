@@ -47,7 +47,7 @@
     gap: 1rem;
     background-color: #0C25A3;
     color: #fff;
-    padding: 0.75rem 0.5rem;
+    padding: 1.6rem 1rem;
     border-radius: 1rem;
     text-align: center;
     width: 100%;
@@ -79,6 +79,74 @@
     font-weight: 600;
     width: 100%;
     padding-right: 30px;
+}
+
+.cari-container {
+    text-align: center;
+    margin: 2rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 4px solid rgba(0, 0, 0, 0.3);
+}
+
+.search-sort-container {
+    display: flex;
+    align-items: center;
+    gap: 20rem;
+    margin-left: 0.5rem;
+    margin-top: 1rem;
+}
+
+.search-box {
+    display: flex;
+    align-items: center;
+    border-radius: 0.5rem;
+    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.316);
+    width: 35%;
+}
+
+.search-box input {
+    border: none;
+    padding: 0.5rem;
+    border-radius: 0.5rem 0 0 0.5rem;
+    outline: none;
+    background-color: #cac4d06c;
+    width: 100%;
+}
+
+.search-box button {
+    border: none;
+    background-color: #5769c2;
+    padding: 0.5rem 1rem;
+    border-radius: 0 0.5rem 0.5rem 0;
+    color: white;
+    cursor: pointer;
+}
+
+.search-box button i {
+    font-size: 16px;
+}
+
+.sort-box {
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+}
+
+.sort-box select {
+    border: 1px solid #000000;
+    border-radius: 4px;
+    padding: 0.5rem 5rem 0.5rem 1rem;
+    margin-left: 0.5rem;
+    outline: none;
+    cursor: pointer;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    appearance: none;
+}
+
+.select-container {
+    position: relative;
+    display: flex;
 }
 
 .arrow-select {
