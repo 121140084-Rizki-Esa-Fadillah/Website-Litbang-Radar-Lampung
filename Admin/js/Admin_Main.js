@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", function () {
-    let currentPage = 'Dashboard_Admin.html';
+    let currentPage = 'Admin_Dashboard.html';
 
     // Fungsi untuk memuat konten secara dinamis
     function loadContent(page) {
@@ -27,10 +27,16 @@ document.addEventListener("DOMContentLoaded", function () {
         const cancelButton = document.querySelector(".tombol-cancel");
         if (cancelButton) {
             cancelButton.addEventListener("click", function () {
-                if (currentPage === 'Admin-Edit-Profil.html' || currentPage === 'Admin-Edit-Password.html') {
+                if (currentPage === 'Admin_Edit_Profil.html' || currentPage === 'Admin_Edit_Password.html') {
                     loadContent('Admin_Profile.html');
-                } else if (currentPage === 'Add_User.html' || currentPage === 'Edit_User.html') {
-                    loadContent('Manajemen-User.html');
+                } else if (currentPage === 'Admin_Add_User.html' || currentPage === 'Admin_Edit_User.html') {
+                    loadContent('Admin_Manajemen_User.html');
+                } else if (currentPage === 'Admin_Tambah_Survey_Hal3_Table.html') {
+                    loadContent('Admin_Tambah_Survey_Hal2.html');
+                } else if (currentPage === 'Admin_Edit_Keterangan_Survey.html') {
+                    loadContent('Admin_Hasil_Survey.html');
+                } else if (currentPage === 'Admin_Tambah_Survey_Hal2.html') {
+                    loadContent('Admin_Tambah_Survey_Hal1.html');
                 }
             });
         }
@@ -39,41 +45,44 @@ document.addEventListener("DOMContentLoaded", function () {
         const saveButton = document.querySelector(".tombol-save");
         if (saveButton) {
             saveButton.addEventListener("click", function () {
-                if (currentPage === 'Admin-Edit-Profil.html' || currentPage === 'Admin-Edit-Password.html') {
+                if (currentPage === 'Admin_Edit_Profil.html' || currentPage === 'Admin_Edit_Password.html') {
                     alert("Data saved!");
                     loadContent('Admin_Profile.html');
-                } else if (currentPage === 'Add_User.html' || currentPage === 'Edit_User.html') {
+                } else if (currentPage === 'Admin_Add_User.html' || currentPage === 'Admin_Edit_User.html') {
                     alert("Data saved!");
-                    loadContent('Manajemen-User.html');
-                } else if (currentPage === 'Tambah_Survey_Hal1.html') {
-                    loadContent('Tambah_Survey_Hal2.html');
-                } else if (currentPage === 'Tambah_Survey_Hal2.html') {
-                    loadContent('Tambah_Survey_Hal3_Table.html');
+                    loadContent('Admin_Manajemen_User.html');
+                } else if (currentPage === 'Admin_Tambah_Survey_Hal1.html') {
+                    alert("Data saved!");
+                    loadContent('Admin_Tambah_Survey_Hal2.html');
+                } else if (currentPage === 'Admin_Tambah_Survey_Hal2.html') {
+                    alert("Data saved!");
+                    loadContent('Admin_Tambah_Survey_Hal3_Table.html');
+                } else if (currentPage === 'Admin_Edit_Keterangan_Survey.html') {
+                    alert("Data saved!");
+                    loadContent('Admin_Hasil_Survey.html');
                 }
             });
         }
 
-        // Tambahkan event listener untuk tombol "Edit Profil"
-        const editProfilButton = document.querySelector(".tombol-edit-profil");
-        if (editProfilButton) {
-            editProfilButton.addEventListener("click", function () {
-                loadContent('Admin-Edit-Profil.html');
+        // Tambahkan event listener untuk tombol "Edit"
+        const editButtons = document.querySelectorAll(".tombol-edit");
+        editButtons.forEach(editButton => {
+            editButton.addEventListener("click", function () {
+                if (currentPage === 'Admin_Profile.html') {
+                    loadContent('Admin_Edit_Profil.html');
+                } else if (currentPage === 'Admin_Manajemen_User.html') {
+                    loadContent('Admin_Edit_User.html');
+                } else if (currentPage === 'Admin_Hasil_Survey.html') {
+                    loadContent('Admin_Edit_Keterangan_Survey.html');
+                }
             });
-        }
+        });
 
         // Tambahkan event listener untuk tombol "Tambah User"
         const addUserButton = document.querySelector(".tombol-tambah-user");
         if (addUserButton) {
             addUserButton.addEventListener("click", function () {
-                loadContent('Add_User.html');
-            });
-        }
-
-        // Tambahkan event listener untuk tombol "Edit User Management"
-        const editUserButton = document.querySelector(".tombol-edit-user");
-        if (editUserButton) {
-            editUserButton.addEventListener("click", function () {
-                loadContent('Edit_User.html');
+                loadContent('Admin_Add_User.html');
             });
         }
 
@@ -92,22 +101,23 @@ document.addEventListener("DOMContentLoaded", function () {
         if (editPasswordLink) {
             editPasswordLink.addEventListener("click", function (e) {
                 e.preventDefault();
-                loadContent('Admin-Edit-Password.html');
+                loadContent('Admin_Edit_Password.html');
             });
         }
 
-        // Tambahkan event listener untuk tombol "Tombol Kembali"
-        const backButton = document.querySelector(".tombol-kembali");
-        if (backButton) {
-            backButton.addEventListener("click", function () {
-                loadContent('Tambah_Survey_Hal2.html');
+        // Tambahkan event listener untuk tombol "Tombol Publish"
+        const publishButton = document.querySelector(".tombol-publish");
+        if (publishButton) {
+            publishButton.addEventListener("click", function () {
+                alert("Data saved Publish!");
+                loadContent('Admin_Hasil_Survey.html');
             });
         }
     }
 
     // Muat konten default
-    loadContent('Dashboard_Admin.html');
-    setActiveLink(document.querySelector("nav ul li a[href='#dashboard_admin']"));
+    loadContent('Admin_Dashboard.html');
+    setActiveLink(document.querySelector("nav ul li a[href='#admin_dashboard']"));
 
     // Tambahkan event listener untuk link sidebar
     document.querySelectorAll("nav ul li a").forEach(link => {
