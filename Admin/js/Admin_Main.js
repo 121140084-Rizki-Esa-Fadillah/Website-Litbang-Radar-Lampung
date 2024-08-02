@@ -39,8 +39,17 @@ document.addEventListener("DOMContentLoaded", function () {
         const saveButton = document.querySelector(".tombol-save");
         if (saveButton) {
             saveButton.addEventListener("click", function () {
-                // Logika untuk menyimpan data bisa ditambahkan di sini
-                alert("Data saved!"); // Contoh alert, ganti dengan logika penyimpanan yang sesuai
+                if (currentPage === 'Admin-Edit-Profil.html' || currentPage === 'Admin-Edit-Password.html') {
+                    alert("Data saved!");
+                    loadContent('Admin_Profile.html');
+                } else if (currentPage === 'Add_User.html' || currentPage === 'Edit_User.html') {
+                    alert("Data saved!");
+                    loadContent('Manajemen-User.html');
+                } else if (currentPage === 'Tambah_Survey_Hal1.html') {
+                    loadContent('Tambah_Survey_Hal2.html');
+                } else if (currentPage === 'Tambah_Survey_Hal2.html') {
+                    loadContent('Tambah_Survey_Hal3_Table.html');
+                }
             });
         }
 
@@ -59,7 +68,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 loadContent('Add_User.html');
             });
         }
-        
+
         // Tambahkan event listener untuk tombol "Edit User Management"
         const editUserButton = document.querySelector(".tombol-edit-user");
         if (editUserButton) {
@@ -84,6 +93,14 @@ document.addEventListener("DOMContentLoaded", function () {
             editPasswordLink.addEventListener("click", function (e) {
                 e.preventDefault();
                 loadContent('Admin-Edit-Password.html');
+            });
+        }
+
+        // Tambahkan event listener untuk tombol "Tombol Kembali"
+        const backButton = document.querySelector(".tombol-kembali");
+        if (backButton) {
+            backButton.addEventListener("click", function () {
+                loadContent('Tambah_Survey_Hal2.html');
             });
         }
     }

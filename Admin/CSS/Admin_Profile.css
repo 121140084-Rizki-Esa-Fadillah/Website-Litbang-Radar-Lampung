@@ -3,6 +3,7 @@
     letter-spacing: 0.5px;
 }
 
+
 .profile-admin {
     display: flex;
     align-items: center;
@@ -64,14 +65,14 @@
 
 .edit {
     margin: 2rem 0 0 2rem;
-    width: 15%;
+    width: 20%;
 }
 
 .edit button {
     color: white;
     font-size: 1rem;
     background-color: #0C25A3;
-    padding: 0.5rem 1.25rem;
+    padding: 0.5rem 2rem;
     display: flex;
     justify-content: center;
     border-radius: 0.5rem;

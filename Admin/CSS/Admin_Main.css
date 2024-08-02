@@ -192,8 +192,8 @@ nav ul li.active {
     font-size: 2rem;
 }
 
-.tambah-survey,
-.hasil-survey {
+.Tambah_Survey_Hal1,
+.Hasil_Survey {
     display: flex;
     align-items: center;
     padding-left: 1rem;
@@ -210,7 +210,7 @@ li .survey-toggle {
 .rotate {
     transform: rotate(90deg);
     transition: transform 0.4s ease;
-    transform-origin: center; /* Memastikan bahwa rotasi terjadi di sekitar pusat ikon */
+    transform-origin: center; 
 }
 
 
