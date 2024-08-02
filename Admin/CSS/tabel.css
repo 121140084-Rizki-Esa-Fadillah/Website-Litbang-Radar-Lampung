@@ -24,7 +24,7 @@ table.survey-table {
 }
 
 .survey-table tr:nth-child(even) {
-    background-color: #f9f9f9;
+    background-color: #ffffff;
 }
 
 .survey-table tr:hover {

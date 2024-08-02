@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tambah Survey</title>
-    <link rel="stylesheet" href="../CSS/Admin_Tambah_Survey_Hal3_Table.css">
+    <link rel="stylesheet" href="../CSS/Admin_Tambah_Survey_Hal2.css">
     <script src="https://kit.fontawesome.com/ae643ea90b.js" crossorigin="anonymous"></script>
 </head>
 <body>
@@ -16,35 +16,31 @@
     <div class="tambah_survei">
         <h2>Judul Survey</h2>
     </div>
-    <div class="tab-container-wrapper">
-        <div class="tab-container">
-            <button class="tab active" onclick="showTab('table')">Tabel Data</button>
-            <button class="tab" onclick="showTab('chart')">  Grafik  </button>
-        </div>
-        <div class="sort-box">
-            <select id="sort">
-                <option value="Lampung_Barat">Lampung Barat</option>
-                <option value="tanggamus">Tanggamus</option>
-                <option value="lampung_selatan">Lampung Selatan</option>
-                <option value="lampung_timur">Lampung Timur</option>
-                <option value="lampung_tengah">Lampung Tengah</option>
-                <option value="lampung_utara">Lampung Utara</option>
-                <option value="way_kanan">Way Kanan</option>
-                <option value="tulang_bawang">Tulang Bawang</option>
-                <option value="pesawaran">Pesawaran</option>
-                <option value="pringsewu">Pringsewu</option>
-                <option value="mesuji">Mesuji</option>
-                <option value="tulang_bawang_barat">Tulang Bawang Barat</option>
-                <option value="pesisir_barat">Pesisir Barat</option>
-                <option value="Bandar_Lampung">Bandar Lampung</option>
-                <option value="metro">Kota Metro</option>
-                </select>
-                <span class="material-symbols-outlined arrow-select">
-                    keyboard_arrow_up    
-                </span>
-        </div>
+    <div class="sort-box">
+        <label for="sort">Pilih Wilayah :</label>
+        <select id="sort">
+            <option value="lampung_barat">Lampung Barat</option>
+            <option value="tanggamus">Tanggamus</option>
+            <option value="lampung_selatan">Lampung Selatan</option>
+            <option value="lampung_timur">Lampung Timur</option>
+            <option value="lampung_tengah">Lampung Tengah</option>
+            <option value="lampung_utara">Lampung Utara</option>
+            <option value="way_kanan">Way Kanan</option>
+            <option value="tulang_bawang">Tulang Bawang</option>
+            <option value="pesawaran">Pesawaran</option>
+            <option value="pringsewu">Pringsewu</option>
+            <option value="mesuji">Mesuji</option>
+            <option value="tulang_bawang_barat">Tulang Bawang Barat</option>
+            <option value="pesisir_barat">Pesisir Barat</option>
+            <option value="Bandar_Lampung">Bandar Lampung</option>
+            <option value="metro">Kota Metro</option>
+        </select>
     </div>
-    <div class="tabel">
+    <div class="keterangan">
+        <h3>Masukkan Data Survey Anda ke Dalam Kolom yang Tersedia di Tabel di Bawah Ini!</h3><br>
+        <p>Mohon untuk mengisi data survei dengan lengkap dan akurat pada kolom-kolom yang telah disediakan di tabel di bawah ini. Data yang Anda berikan sangat berharga bagi kami untuk meningkatkan kualitas layanan dan memahami kebutuhan serta kepuasan Anda dengan lebih baik.</p>
+    </div>
+    <div class="table">
         <h3>Gender</h3>
         <table>
             <thead>
@@ -175,8 +171,12 @@
                 </tr>
         </table>
     </div>
-    <div class="actions">
-        <button class="tombol-kembali">Kembali</button>
-        <button class="tombol-publish">Publish</button>
+    <div class="save">
+        <button class="tombol-cancel">
+            <strong>Kembali</strong>
+        </button>
+        <button class="tombol-save">
+            <strong>Save</strong>
+        </button>
     </div>
 </body>
