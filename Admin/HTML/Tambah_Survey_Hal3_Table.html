@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tambah Survey</title>
+    <link rel="stylesheet" href="../CSS/Admin_Tambah_Survey_Hal3_Table.css">
+    <script src="https://kit.fontawesome.com/ae643ea90b.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <section id="Tambah_Survey">
+        <i class="fa-solid fa-bars"></i>
+        <h2>Tambah Survey</h2>
+    </section>
+    <div class="tambah_survei">
+        <h2>Judul Survey</h2>
+    </div>
+    <div class="tab-container-wrapper">
+        <div class="tab-container">
+            <button class="tab active" onclick="showTab('table')">Tabel Data</button>
+            <button class="tab" onclick="showTab('chart')">  Grafik  </button>
+        </div>
+        <div class="sort-box">
+            <select id="sort">
+                <option value="Lampung_Barat">Lampung Barat</option>
+                <option value="tanggamus">Tanggamus</option>
+                <option value="lampung_selatan">Lampung Selatan</option>
+                <option value="lampung_timur">Lampung Timur</option>
+                <option value="lampung_tengah">Lampung Tengah</option>
+                <option value="lampung_utara">Lampung Utara</option>
+                <option value="way_kanan">Way Kanan</option>
+                <option value="tulang_bawang">Tulang Bawang</option>
+                <option value="pesawaran">Pesawaran</option>
+                <option value="pringsewu">Pringsewu</option>
+                <option value="mesuji">Mesuji</option>
+                <option value="tulang_bawang_barat">Tulang Bawang Barat</option>
+                <option value="pesisir_barat">Pesisir Barat</option>
+                <option value="Bandar_Lampung">Bandar Lampung</option>
+                <option value="metro">Kota Metro</option>
+                </select>
+                <span class="material-symbols-outlined arrow-select">
+                    keyboard_arrow_up    
+                </span>
+        </div>
+    </div>
+    <div class="tabel">
+        <h3>Gender</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>Kategori</th>
+                    <th>Sangat Puas</th>
+                    <th>Puas</th>
+                    <th>Kurang Puas</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Laki-laki</td>
+                    <td><input type="number"></td>
+                    <td><input type="number"></td>
+                    <td><input type="number"></td>
+                </tr>
+                <tr>
+                    <td>Perempuan</td>
+                    <td><input type="number"></td>
+                    <td><input type="number"></td>
+                    <td><input type="number"></td>
+                </tr>
+            </tbody>
+        </table>
+        <h3>Usia</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>Kategori</th>
+                    <th>Sangat Puas</th>
+                    <th>Puas</th>
+                    <th>Kurang Puas</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>18-35 Tahun</td>
+                    <td><input type="number"></td>
+                    <td><input type="number"></td>
+                    <td><input type="number"></td>
+                </tr>
+                <tr>
+                    <td>36 Tahun ke atas</td>
+                    <td><input type="number"></td>
+                    <td><input type="number"></td>
+                    <td><input type="number"></td>
+                </tr>
+            </tbody>
+        </table>
+        <h3>Lulusan</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>Kategori</th>
+                    <th>Sangat Puas</th>
+                    <th>Puas</th>
+                    <th>Kurang Puas</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>SD</td>
+                    <td><input type="number"></td>
+                    <td><input type="number"></td>
+                    <td><input type="number"></td>
+                </tr>
+                <tr>
+                    <td>SMP</td>
+                    <td><input type="number"></td>
+                    <td><input type="number"></td>
+                    <td><input type="number"></td>
+                </tr>
+                <tr>
+                    <td>SMA</td>
+                    <td><input type="number"></td>
+                    <td><input type="number"></td>
+                    <td><input type="number"></td>
+                </tr>
+                <tr>
+                    <td>Diploma</td>
+                    <td><input type="number"></td>
+                    <td><input type="number"></td>
+                    <td><input type="number"></td>
+                </tr>
+                <tr>
+                    <td>S1/S2/S3</td>
+                    <td><input type="number"></td>
+                    <td><input type="number"></td>
+                    <td><input type="number"></td>
+                </tr>
+            </tbody>
+        </table>
+            <h3>Profesi</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>Kategori</th>
+                    <th>Sangat Puas</th>
+                    <th>Puas</th>
+                    <th>Kurang Puas</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>PNS</td>
+                    <td><input type="number"></td>
+                    <td><input type="number"></td>
+                    <td><input type="number"></td>
+                </tr>
+                <tr>
+                    <td>Swasta/Wiraswasta</td>
+                    <td><input type="number"></td>
+                    <td><input type="number"></td>
+                    <td><input type="number"></td>
+                </tr>
+                <tr>
+                    <td>Pelajar/Mahasiswa</td>
+                    <td><input type="number"></td>
+                    <td><input type="number"></td>
+                    <td><input type="number"></td>
+                </tr>
+                <tr>
+                    <td>Pengangguran</td>
+                    <td><input type="number"></td>
+                    <td><input type="number"></td>
+                    <td><input type="number"></td>
+                </tr>
+        </table>
+    </div>
+    <div class="actions">
+        <button class="tombol-kembali">Kembali</button>
+        <button class="tombol-publish">Publish</button>
+    </div>
+</body>

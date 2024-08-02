@@ -3,6 +3,7 @@
     letter-spacing: 0.5px;
 }
 
+
 .profile-admin {
     display: flex;
     align-items: center;
@@ -54,24 +55,36 @@
     text-decoration: none;
 }
 
+.value-password a:hover {
+    font-weight: 600;
+}
+
 .password-admin {
     margin-right: 20px;
 }
 
 .edit {
     margin: 2rem 0 0 2rem;
-    width: 15%;
+    width: 20%;
 }
 
-.edit a {
+.edit button {
     color: white;
     font-size: 1rem;
     background-color: #0C25A3;
-    padding:  0.5rem 1rem;
+    padding: 0.5rem 2rem;
     display: flex;
     justify-content: center;
     border-radius: 0.5rem;
     border-width: 0;
     text-decoration: none;
     gap: 0.5rem;
+    transition: background-color 0.3s ease, transform 0.3s ease; 
+    cursor: pointer; 
+}
+
+.edit button:hover {
+    background-color: #D9D9D9; 
+    color: #0C25A3;
+    border: 1px solid #0C25A3;
 }
