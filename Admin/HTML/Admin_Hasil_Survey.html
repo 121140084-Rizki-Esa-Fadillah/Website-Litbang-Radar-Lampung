@@ -16,19 +16,42 @@
         <h2>Hasil Survey</h2>
     </section>
     <div class="judul-container">
-        <h2>Hasil Survei</h2>
         <div class="search">
-            <p>Search :</p>
             <div class="search-box">
-                <input type="text">
+                <input type="text" placeholder="Search...">
                 <button>
                     <i class="fa fa-search"></i>
                 </button>
             </div>
         </div>
+        <div class="sort-box">
+            <label for="sort">Sorting :</label>
+            <div class="select-container">
+                <select id="sort">
+                    <option value="lampung_barat">Lampung Barat</option>
+                    <option value="tanggamus">Tanggamus</option>
+                    <option value="lampung_selatan">Lampung Selatan</option>
+                    <option value="lampung_timur">Lampung Timur</option>
+                    <option value="lampung_tengah">Lampung Tengah</option>
+                    <option value="lampung_utara">Lampung Utara</option>
+                    <option value="way_kanan">Way Kanan</option>
+                    <option value="tulang_bawang">Tulang Bawang</option>
+                    <option value="pesawaran">Pesawaran</option>
+                    <option value="pringsewu">Pringsewu</option>
+                    <option value="mesuji">Mesuji</option>
+                    <option value="tulang_bawang_barat">Tulang Bawang Barat</option>
+                    <option value="pesisir_barat">Pesisir Barat</option>
+                    <option value="Bandar_Lampung">Bandar Lampung</option>
+                    <option value="metro">Kota Metro</option>
+                </select>
+                <span class="material-symbols-outlined arrow-select">
+                    keyboard_arrow_up    
+                </span>
+            </div>
+        </div>
     </div>
     <div class="hasil">
-        <h3>Judul Survey</h3>
+        <h3 class="survey-title" data-survey-id="1">Judul Survey</h3>
         <div class="hasil-container">
             <div class="img"></div>
             <div class="ket">
@@ -42,16 +65,20 @@
                             </span>
                         <p>Radar Litbang, 32 Juli 2023</p>
                     </div>
-                    <div class="tombol">
-                        <button>Edit</button>
-                        <button>Delete</button>
+                    <div class="action-buttons">
+                        <button class="tombol-edit">
+                            <i class="fa fa-edit"></i>Edit
+                        </button>
+                        <button class="tombol-hapus-survey">
+                            <i class="fa fa-trash"></i>Delete
+                        </button>
                     </div>
                 </div>
             </div>
         </div>
     </div>
     <div class="hasil">
-        <h3>Judul Survey</h3>
+        <h3 class="survey-title" data-survey-id="2">Judul Survey</h3>
         <div class="hasil-container">
             <div class="img"></div>
             <div class="ket">
@@ -65,9 +92,13 @@
                             </span>
                         <p>Radar Litbang, 32 Juli 2023</p>
                     </div>
-                    <div class="tombol">
-                        <button>Edit</button>
-                        <button>Delete</button>
+                    <div class="action-buttons">
+                        <button class="tombol-edit">
+                            <i class="fa fa-edit"></i>Edit
+                        </button>
+                        <button class="tombol-hapus-survey">
+                            <i class="fa fa-trash"></i>Delete
+                        </button>
                     </div>
                 </div>
             </div>

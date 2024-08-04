@@ -3,51 +3,47 @@
     letter-spacing: 0.5px;
 }
 
-.tambah_survei {
-    margin-top: 1.5rem;
-}
-
 .tambah_survei h2{
     text-align: center;
+    margin: 1.5rem;
+}
+
+.tab-container-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: solid 1.5px #79747E;
+    box-shadow: 0 3px rgba(0, 0, 0, 0.1);
+    margin: 1rem 2rem;
+}
+
+.tab-container {
+    display: flex;
+    background-color: #f1ebf7;
+    font-size: 14px;
+}
+
+.tab {
+    padding: 0.5rem 1rem;
+    border: none;
+    background-color: #f1ebf7;
+    cursor: pointer;
+    color: #000;
+    font-weight: 600;
+}
+
+.tab.active {
+    background-color: #0C25A3;
+    color: #ffffff;
+    border-radius: 0.25rem 0.25rem 0 0;
+    padding: 0.5rem 1rem;
+    font-weight: 600;
 }
 
 .sort-box {
     display: flex;
+    align-items: center;
     font-size: 14px;
-    flex-direction: column;
-    margin: 2rem;
-    padding-bottom: 1rem;
-    border-bottom: solid 1.5px #79747E;
-    box-shadow: 0 3px rgba(0, 0, 0, 0.1);
-}
-
-.sort-box label{
-    font-weight: 600;
-    font-size: 1rem;
-    padding-bottom: 0.5rem;
-}
-
-.sort-box select {
-    border: 1px solid #ddd;
-    border-radius: 0.5rem;
-    padding: 0.5rem 5rem 0.5rem 1rem;
-    width: 75%;
-    outline: none;
-    cursor: pointer;
-    font-size: 14px;
-    -moz-appearance: none;
-    -webkit-appearance: none; 
-    appearance: none; 
-    background-image: url('data:image/svg+xml;charset=US-ASCII,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 10 10"><polygon points="5,8 1,2 9,2" fill="%23000"/></svg>');
-    background-repeat: no-repeat;
-    background-position: right 0.5rem center; 
-    background-size: 0.75rem;
-}
-
-.keterangan{
-    margin: 1rem 2rem;
-    font-size: 14px;
-    text-align: justify;
 }
 
 .table {
@@ -73,27 +69,22 @@ th, td {
     text-align: center;
 }
 
-td input{
-    border: none;
-    outline: none;
-    background-color: transparent;
-    text-align: center;
-    
-}
-
 th {
     background-color: #E2D3EB;
     color: black;
     width: 25%;
 }
 
-.save {
+.grafik {
+    margin-left: 2rem;
+}
+
+.actions {
     display: flex;
     justify-content: space-between;
     margin: 2rem 2rem 0 2rem;
     padding: 2rem 0;
     border-top: solid 1.5px #79747E;
-    box-shadow: 0 3px rgba(0, 0, 0, 0.1);
 }
 
 .tombol-cancel {
@@ -101,13 +92,17 @@ th {
     font-size: 1rem;
     background-color: #D9D9D9;
     padding: 0.5rem 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     border-radius: 0.5rem;
-    margin-left: 3rem;
     border-width: 0;
     text-decoration: none;
     gap: 0.5rem;
     transition: background-color 0.3s ease, transform 0.3s ease; 
     cursor: pointer; 
+    font-weight: 600;
+    margin-left: 1rem;
 }
 
 .tombol-cancel:hover {
@@ -115,21 +110,24 @@ th {
     border: 1px solid black;
 }
 
-.tombol-save {
+.tombol-publish{
     color: white;
     font-size: 1rem;
     background-color: #0C25A3;
     padding: 0.5rem 1.5rem;
+    display: flex;
+    justify-content: center;
     border-radius: 0.5rem;
     border-width: 0;
-    margin-right: 3rem;
     text-decoration: none;
     gap: 0.5rem;
     transition: background-color 0.3s ease, transform 0.3s ease; 
     cursor: pointer; 
+    font-weight: 600;
+    margin-right: 3rem;
 }
 
-.tombol-save:hover {
+.tombol-publish:hover {
     background-color: #D9D9D9; 
     color: #0C25A3;
     border: 1px solid #0C25A3;

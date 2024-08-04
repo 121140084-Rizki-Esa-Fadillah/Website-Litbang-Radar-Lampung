@@ -3,71 +3,76 @@
     letter-spacing: 0.5px;
 }
 
-.header-add-user {
+.form-section {
+    background-color: #fff;
+    padding: 1.25rem 2rem;
+    border-radius: 0.25rem;
+    box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.1);
+}
+
+.form-section h2 {
     text-align: center;
-    border-bottom: solid 1.5px #79747E;
-    margin: 1.5rem 2rem 1rem 2rem;
-    padding-bottom: 0.5rem;
-    box-shadow: 0 3px rgba(0, 0, 0, 0.1);
-}
-
-.data-profile-user {
-    display: flex;
-    flex-direction: column;
-    margin-left: 2rem;
-}
-
-.form-group {
     margin-bottom: 1rem;
-    width: 40rem;
-    display: flex;
-    margin-left: 1rem;
 }
 
-.form-group label, .form-group input {
+form label {
     display: block;
-    width: 100%;
+    margin: 0.25rem 0 0.25rem 0;
+    font-weight: bold;
     font-size: 1rem;
 }
 
-.form-group label {
-    font-weight: 600;
-    margin-right: 1rem;
-    display: flex;
-    align-items: center;
-}
-
-.form-group input,
-.form-group select {
-    flex-grow: 1;
+form input[type="text"],
+form textarea {
+    width: 100%;
     padding: 0.5rem;
-    box-sizing: border-box;
-    border-radius: 0.5rem;
-    width: 300%;
-    border: 1px solid #0C25A3;
+    margin-top: 0.25rem;
+    margin-bottom: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 0.25rem;
+    font-size: 14px;
 }
 
-.form-group select {
-    -moz-appearance: none;
-    -webkit-appearance: none; 
-    appearance: none; 
-    background-image: url('data:image/svg+xml;charset=US-ASCII,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 10 10"><polygon points="5,8 1,2 9,2" fill="%23000"/></svg>');
-    background-repeat: no-repeat;
-    background-position: right 0.5rem center; 
-    background-size: 0.75rem;
+form textarea {
+    resize: vertical;
 }
 
-.roles {
+.upload-section {
     display: flex;
-    width: 35rem;
+    flex-direction: column;
+    align-items: center;
+    width: 50%;
+    border: 1.5px dashed #474747;
+    border-radius: 0.5rem;
+    background-color: #f9f9f9;
+    margin: 1rem auto;
+    cursor: pointer;
 }
 
-.roles label {
-    width: 35rem;
+.upload-section input[type="file"] {
+    display: none;
 }
 
-.roles input {
-    width: 10rem;
+.upload-box {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    height: 8rem;
+    justify-content: center;
+}
+
+.upload-box img {
+    width: 3rem;
+    margin: 0.25rem auto 0.5rem;
+}
+
+.upload-box span {
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.upload-box p {
+    font-size: 14px;
 }
 
 .tombol {
