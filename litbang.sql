@@ -1,3 +1,13 @@
+CREATE TABLE user (
+    id INT PRIMARY KEY AUTO_INCREMENT NOT NULL,
+    username varchar(25) NOT NULL,
+    nama_lengkap varchar(50) NOT NULL,
+    email varchar(75) NOT NULL,
+    jenis_kelamin varchar(20) NOT NULL,
+    no_hp varchar(20) NOT NULL,
+    password varchar(255) NOT NULL
+);
+
 CREATE TABLE survey (
     id INT PRIMARY KEY AUTO_INCREMENT NOT NULL,
     title varchar(100) NOT NULL,
