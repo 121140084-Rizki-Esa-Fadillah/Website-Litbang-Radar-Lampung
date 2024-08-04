@@ -40,10 +40,6 @@
     font-weight: 600;
 }
 
-.tab:not(.active):hover {
-    background-color: #e2d3eb;
-}
-
 .sort-box {
     display: flex;
     align-items: center;
@@ -111,13 +107,16 @@ th {
     width: 25%;
 }
 
+.grafik {
+    margin-left: 2rem;
+}
+
 .actions {
     display: flex;
     justify-content: space-between;
     margin: 2rem 2rem 0 2rem;
     padding: 2rem 0;
     border-top: solid 1.5px #79747E;
-    box-shadow: 0 3px rgba(0, 0, 0, 0.1);
 }
 
 .tombol-cancel {

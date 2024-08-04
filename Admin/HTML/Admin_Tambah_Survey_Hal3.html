@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tambah Survey</title>
-    <link rel="stylesheet" href="../CSS/Admin_Tambah_Survey_Hal3_Table.css">
+    <link rel="stylesheet" href="../CSS/Admin_Tambah_Survey_Hal3.css">
     <script src="https://kit.fontawesome.com/ae643ea90b.js" crossorigin="anonymous"></script>
 </head>
 <body>
@@ -18,8 +18,8 @@
     </div>
     <div class="tab-container-wrapper">
         <div class="tab-container">
-            <button class="tab active" onclick="showTab('table')">Tabel Data</button>
-            <button class="tab" onclick="showTab('chart')">  Grafik  </button>
+            <button id="table-button" class="tab active">Tabel Data</button>
+            <button id="chart-button" class="tab ">Grafik</button>
         </div>
         <div class="sort-box">
             <div class="select-container">
@@ -46,7 +46,7 @@
             </div>
         </div>
     </div>
-    <div class="table">
+    <div id="table" class="table" style="display: block;">
         <h3>Gender</h3>
         <table>
             <thead>
@@ -140,7 +140,7 @@
                 </tr>
             </tbody>
         </table>
-            <h3>Profesi</h3>
+        <h3>Profesi</h3>
         <table>
             <thead>
                 <tr>
@@ -175,10 +175,17 @@
                     <td></td>
                     <td></td>
                 </tr>
+            </tbody>
         </table>
+    </div>
+    <div id="chart" class="grafik" style="display: none;">
+        <!-- Tempat untuk menampilkan grafik -->
+        <h3>Grafik Survey</h3>
+        <p>Di sini grafik akan ditampilkan.</p>
     </div>
     <div class="actions">
         <button class="tombol-cancel">Kembali</button>
         <button class="tombol-publish"><i class="fa-solid fa-upload"></i>Publish</button>
     </div>
 </body>
+</html>
