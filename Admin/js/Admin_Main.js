@@ -18,7 +18,9 @@ document.addEventListener("DOMContentLoaded", function () {
         document.querySelectorAll("nav ul li").forEach(li => {
             li.classList.remove("active");
         });
-        link.parentElement.classList.add("active");
+        if (link) {
+            link.parentElement.classList.add("active");
+        }
     }
 
     // Initialize event listeners for buttons and links
@@ -36,7 +38,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 } else if (currentPage === 'Admin_Edit_Keterangan_Survey.html') {
                     loadContent('Admin_Hasil_Survey.html');
                 } else if (currentPage === 'Admin_Tambah_Survey_Hal2.html') {
-                    loadContent('Admin_Tambah_Survey.html');
+                    loadContent('Admin_Tambah_Survey_Hal1.html');
                 }
             });
         }
@@ -92,7 +94,7 @@ document.addEventListener("DOMContentLoaded", function () {
             settingsLink.addEventListener("click", function (e) {
                 e.preventDefault();
                 loadContent('Admin_Profile.html');
-                setActiveLink(e.target);
+                setActiveLink(e.target.parentElement);
             });
         }
 
@@ -102,6 +104,7 @@ document.addEventListener("DOMContentLoaded", function () {
             editPasswordLink.addEventListener("click", function (e) {
                 e.preventDefault();
                 loadContent('Admin_Edit_Password.html');
+                setActiveLink(e.target.parentElement);
             });
         }
 
@@ -119,12 +122,12 @@ document.addEventListener("DOMContentLoaded", function () {
         surveyTitles.forEach(title => {
             title.addEventListener("click", function () {
                 const surveyId = this.getAttribute("data-survey-id");
-                loadContent('Admin_Detail_Hasil_Survey.html?id=${surveyId}');
+                loadContent(`Admin_Detail_Hasil_Survey.html?id=${surveyId}`);
             });
         });
 
         // Initialize event listener specific to loaded page
-        if (currentPage === 'Admin_Tambah_Survey_Hal3.html' || currentPage === 'Admin_Detail_Hasil_Survey.html?id=${surveyId}') {
+        if (currentPage === 'Admin_Tambah_Survey_Hal3.html' || currentPage.startsWith('Admin_Detail_Hasil_Survey.html')) {
             const tableButton = document.getElementById('table-button');
             const chartButton = document.getElementById('chart-button');
             const tableDiv = document.getElementById('table');
@@ -160,7 +163,7 @@ document.addEventListener("DOMContentLoaded", function () {
             e.preventDefault();
             const page = e.target.getAttribute("href").substring(1) + '.html';
             loadContent(page);
-            setActiveLink(e.target);
+            setActiveLink(e.target.parentElement);
         });
     });
 
