@@ -10,6 +10,9 @@ document.addEventListener("DOMContentLoaded", function () {
                 document.querySelector("#content").innerHTML = data;
                 // Reinitialize event listeners after content is loaded
                 initializeEventListeners();
+            })
+            .catch(error => {
+                console.error("Error loading content:", error);
             });
     }
 
@@ -26,56 +29,69 @@ document.addEventListener("DOMContentLoaded", function () {
     // Initialize event listeners for buttons and links
     function initializeEventListeners() {
         // Add event listener for "Cancel" buttons
-        const cancelButton = document.querySelector(".tombol-cancel");
-        if (cancelButton) {
+        document.querySelectorAll(".tombol-cancel").forEach(cancelButton => {
             cancelButton.addEventListener("click", function () {
-                if (currentPage === 'Admin_Edit_Profil.html' || currentPage === 'Admin_Edit_Password.html') {
-                    loadContent('Admin_Profile.html');
-                } else if (currentPage === 'Admin_Add_User.html' || currentPage === 'Admin_Edit_User.html') {
-                    loadContent('Admin_Manajemen_User.html');
-                } else if (currentPage === 'Admin_Tambah_Survey_Hal3.html') {
-                    loadContent('Admin_Tambah_Survey_Hal2.html');
-                } else if (currentPage === 'Admin_Edit_Keterangan_Survey.html') {
-                    loadContent('Admin_Hasil_Survey.html');
-                } else if (currentPage === 'Admin_Tambah_Survey_Hal2.html') {
-                    loadContent('Admin_Tambah_Survey_Hal1.html');
+                switch (currentPage) {
+                    case 'Admin_Edit_Profil.html':
+                    case 'Admin_Edit_Password.html':
+                        loadContent('Admin_Profile.html');
+                        break;
+                    case 'Admin_Add_User.html':
+                    case 'Admin_Edit_User.html':
+                        loadContent('Admin_Manajemen_User.html');
+                        break;
+                    case 'Admin_Tambah_Survey_Hal3.html':
+                        loadContent('Admin_Tambah_Survey_Hal2.html');
+                        break;
+                    case 'Admin_Edit_Keterangan_Survey.html':
+                        loadContent('Admin_Hasil_Survey.html');
+                        break;
+                    case 'Admin_Tambah_Survey_Hal2.html':
+                        loadContent('Admin_Tambah_Survey_Hal1.html');
+                        break;
                 }
             });
-        }
+        });
 
         // Add event listener for "Save" buttons
-        const saveButton = document.querySelector(".tombol-save");
-        if (saveButton) {
+        document.querySelectorAll(".tombol-save").forEach(saveButton => {
             saveButton.addEventListener("click", function () {
-                if (currentPage === 'Admin_Edit_Profil.html' || currentPage === 'Admin_Edit_Password.html') {
-                    alert("Data saved!");
-                    loadContent('Admin_Profile.html');
-                } else if (currentPage === 'Admin_Add_User.html' || currentPage === 'Admin_Edit_User.html') {
-                    alert("Data saved!");
-                    loadContent('Admin_Manajemen_User.html');
-                } else if (currentPage === 'Admin_Tambah_Survey_Hal1.html') {
-                    alert("Data saved!");
-                    loadContent('Admin_Tambah_Survey_Hal2.html');
-                } else if (currentPage === 'Admin_Tambah_Survey_Hal2.html') {
-                    alert("Data saved!");
-                    loadContent('Admin_Tambah_Survey_Hal3.html');
-                } else if (currentPage === 'Admin_Edit_Keterangan_Survey.html') {
-                    alert("Data saved!");
-                    loadContent('Admin_Hasil_Survey.html');
+                switch (currentPage) {
+                    case 'Admin_Edit_Profil.html':
+                    case 'Admin_Edit_Password.html':
+                        alert("Data saved!");
+                        loadContent('Admin_Profile.html');
+                        break;
+                    case 'Admin_Add_User.html':
+                    case 'Admin_Edit_User.html':
+                        alert("Data saved!");
+                        loadContent('Admin_Manajemen_User.html');
+                        break;
+                    case 'Admin_Tambah_Survey_Hal2.html':
+                        alert("Data saved!");
+                        loadContent('Admin_Tambah_Survey_Hal3.html');
+                        break;
+                    case 'Admin_Edit_Keterangan_Survey.html':
+                        alert("Data saved!");
+                        loadContent('Admin_Hasil_Survey.html');
+                        break;
                 }
             });
-        }
+        });
 
         // Add event listener for "Edit" buttons
-        const editButtons = document.querySelectorAll(".tombol-edit");
-        editButtons.forEach(editButton => {
+        document.querySelectorAll(".tombol-edit").forEach(editButton => {
             editButton.addEventListener("click", function () {
-                if (currentPage === 'Admin_Profile.html') {
-                    loadContent('Admin_Edit_Profil.html');
-                } else if (currentPage === 'Admin_Manajemen_User.html') {
-                    loadContent('Admin_Edit_User.html');
-                } else if (currentPage === 'Admin_Hasil_Survey.html') {
-                    loadContent('Admin_Edit_Keterangan_Survey.html');
+                switch (currentPage) {
+                    case 'Admin_Profile.html':
+                        loadContent('Admin_Edit_Profil.html');
+                        break;
+                    case 'Admin_Manajemen_User.html':
+                        loadContent('Admin_Edit_User.html');
+                        break;
+                    case 'Admin_Hasil_Survey.html':
+                        loadContent('Admin_Edit_Keterangan_Survey.html');
+                        break;
                 }
             });
         });
@@ -118,8 +134,7 @@ document.addEventListener("DOMContentLoaded", function () {
         }
 
         // Add event listener for survey titles to navigate to detail page
-        const surveyTitles = document.querySelectorAll(".survey-title");
-        surveyTitles.forEach(title => {
+        document.querySelectorAll(".survey-title").forEach(title => {
             title.addEventListener("click", function () {
                 const surveyId = this.getAttribute("data-survey-id");
                 loadContent(`Admin_Detail_Hasil_Survey.html?id=${surveyId}`);
@@ -153,9 +168,14 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     }
 
-    // Load default content
-    loadContent('Admin_Dashboard.html');
-    setActiveLink(document.querySelector("nav ul li a[href='#admin_dashboard']"));
+    // Load content based on URL parameter 'page'
+    const urlParams = new URLSearchParams(window.location.search);
+    const page = urlParams.get('page') || 'Admin_Dashboard.html';
+    loadContent(page);
+
+    // Set active link based on URL parameter 'page'
+    const link = document.querySelector(`nav ul li a[href='#${page.replace('.html', '')}']`);
+    setActiveLink(link ? link.parentElement : null);
 
     // Add event listener for sidebar links
     document.querySelectorAll("nav ul li a").forEach(link => {
@@ -169,14 +189,19 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Toggle menu dropdown
     const akun = document.querySelector('.akun');
-    akun.addEventListener('click', function () {
-        this.querySelector('.dropdown').classList.toggle('active');
-    });
+    if (akun) {
+        akun.addEventListener('click', function () {
+            this.querySelector('.dropdown').classList.toggle('active');
+        });
+    }
 
     // Close dropdown if user clicks outside of it
     document.addEventListener('click', function (event) {
-        if (!akun.contains(event.target)) {
-            akun.querySelector('.dropdown').classList.remove('active');
+        if (!akun || !akun.contains(event.target)) {
+            const dropdown = document.querySelector('.akun .dropdown');
+            if (dropdown) {
+                dropdown.classList.remove('active');
+            }
         }
     });
 
@@ -185,10 +210,12 @@ document.addEventListener("DOMContentLoaded", function () {
     const dropdownSurvey = document.querySelector('.dropdown-survey');
     const arrow = document.querySelector('.arrow');
 
-    surveyToggle.addEventListener('click', function () {
-        dropdownSurvey.classList.toggle('show');
-        arrow.classList.toggle('rotate');
-    });
+    if (surveyToggle && dropdownSurvey && arrow) {
+        surveyToggle.addEventListener('click', function () {
+            dropdownSurvey.classList.toggle('show');
+            arrow.classList.toggle('rotate');
+        });
+    }
 
     // Initialize event listeners
     initializeEventListeners();

@@ -8,6 +8,7 @@
     padding: 1.25rem 2rem;
     border-radius: 0.25rem;
     box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.1);
+    position: relative;
 }
 
 .form-section h2 {
@@ -49,10 +50,6 @@ form textarea {
     cursor: pointer;
 }
 
-.upload-section input[type="file"] {
-    display: none;
-}
-
 .upload-box {
     text-align: center;
     display: flex;
@@ -61,23 +58,9 @@ form textarea {
     justify-content: center;
 }
 
-.upload-box img {
-    width: 3rem;
-    margin: 0.25rem auto 0.5rem;
-}
-
-.upload-box span {
-    font-weight: bold;
-    font-size: 14px;
-}
-
-.upload-box p {
-    font-size: 14px;
-}
-
-.save {
+.button-container {
     text-align: right;
-    
+    margin-top: 1rem; 
 }
 
 .tombol-save {
