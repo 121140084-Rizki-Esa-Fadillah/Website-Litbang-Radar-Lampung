@@ -2,14 +2,9 @@
 session_start();
 include("koneksi.php");
 
-// cek koneksi
-if ($conn->connect_error) {
-    die("Koneksi ke database gagal: " . $conn->connect_error);
-}
-
 // Cek apakah pengguna sudah login
-if (isset($_SESSION['email'])) {
-    header("Location: ../HTML/Dashboard_Admin.html"); // Redirect ke halaman dashboard jika sudah login
+if (isset($_SESSION['username'])) {
+    header("Location: ../HTML/Admin_Main.html"); // Redirect ke halaman dashboard jika sudah login
     exit();
 }
 
@@ -20,7 +15,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $password = $_POST['password'];
 
     // Lakukan query untuk mendapatkan informasi pengguna berdasarkan username
-    $stmt = $conn->prepare("SELECT * FROM users WHERE username = ?");
+    $stmt = $conn->prepare("SELECT * FROM user WHERE username = ?");
     $stmt->bind_param('s', $username);
     $stmt->execute();
     $result = $stmt->get_result();
@@ -34,15 +29,15 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $_SESSION['username'] = $user['username'];
 
             // Redirect ke halaman dashboard setelah login berhasil
-            header("Location: ../HTML/Dashboard_Admin.html");
+            header("Location: ../HTML/Admin_Main.html");
             exit();
         } else {
-            $error_message = "Username atau password salah";
-            echo "<script>alert('$error_message');</script>";
+            header("Location: ../HTML/Admin_Login.html?error=invalid_credentials");
+            exit();
         }
     } else {
-        $error_message = "Username atau password salah";
-        echo "<script>alert('$error_message');</script>";
+        header("Location: ../HTML/Admin_Login.html?error=invalid_credentials");
+        exit();
     }
 
     // Tutup statement dan koneksi
