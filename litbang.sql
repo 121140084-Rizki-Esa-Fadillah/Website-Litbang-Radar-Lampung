@@ -1,3 +1,19 @@
+<<<<<<< HEAD
+CREATE TABLE user (
+    id INT PRIMARY KEY AUTO_INCREMENT NOT NULL,
+    username varchar(25) NOT NULL,
+    nama_lengkap varchar(50) NOT NULL,
+    email varchar(75) NOT NULL,
+    jenis_kelamin varchar(20) NOT NULL,
+    no_hp varchar(20) NOT NULL,
+    password varchar(255) NOT NULL
+);
+
+CREATE TABLE survey (
+    id INT PRIMARY KEY AUTO_INCREMENT NOT NULL,
+    title varchar(100) NOT NULL,
+    wilayah varchar(100) NOT NULL
+=======
 -- phpMyAdmin SQL Dump
 -- version 5.2.0
 -- https://www.phpmyadmin.net/
@@ -34,6 +50,7 @@ CREATE TABLE `gender` (
   `laki_laki` varchar(100) NOT NULL,
   `perempuan` varchar(100) NOT NULL,
   `total_responden` int(11) NOT NULL
+>>>>>>> 74791c398e5f6865788852b1e121d5fc9643bd87
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- --------------------------------------------------------
