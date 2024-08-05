@@ -1,9 +1,10 @@
 <?php
 $servername = "localhost";
 $username = "username";
+$password = "";
 $database = "litbang";
 
-$conn = new mysqli($servername, $username, $database);
+$conn = new mysqli($servername, $username, $password, $database);
 
 // Cek koneksi
 if ($conn->connect_error) {
