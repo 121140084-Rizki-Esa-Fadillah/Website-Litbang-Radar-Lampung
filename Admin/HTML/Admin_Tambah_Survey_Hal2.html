@@ -16,26 +16,7 @@
         <h2>Judul Survey</h2>
     </div>
     <form method="post" action="../php/Admin_Tambah_Survey_Hal2.php">
-        <div class="sort-box">
-            <label for="sort">Pilih Wilayah :</label>
-            <select id="id_wilayah" name="id_wilayah" required>
-                <option value="1">Lampung Barat</option>
-                <option value="2">Tanggamus</option>
-                <option value="3">Lampung Selatan</option>
-                <option value="4">Lampung Timur</option>
-                <option value="5">Lampung Tengah</option>
-                <option value="6">Lampung Utara</option>
-                <option value="7">Way Kanan</option>
-                <option value="8">Tulang Bawang</option>
-                <option value="9">Pesawaran</option>
-                <option value="10">Pringsewu</option>
-                <option value="11">Mesuji</option>
-                <option value="12">Tulang Bawang Barat</option>
-                <option value="13">Pesisir Barat</option>
-                <option value="14">Bandar Lampung</option>
-                <option value="15">Kota Metro</option>
-            </select>
-        </div>
+        <input type="hidden" name="id" value="<?php echo $id; ?>">
         <div class="keterangan">
             <h3>Masukkan Data Survey Anda ke Dalam Kolom yang Tersedia di Tabel di Bawah Ini!</h3><br>
             <p>Mohon untuk mengisi data survei dengan lengkap dan akurat pada kolom-kolom yang telah disediakan di tabel di bawah ini. Data yang Anda berikan sangat berharga bagi kami untuk meningkatkan kualitas layanan dan memahami kebutuhan serta kepuasan Anda dengan lebih baik.</p>

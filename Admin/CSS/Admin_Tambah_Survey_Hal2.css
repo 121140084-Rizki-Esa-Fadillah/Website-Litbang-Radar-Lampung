@@ -11,39 +11,6 @@
     text-align: center;
 }
 
-.sort-box {
-    display: flex;
-    font-size: 14px;
-    flex-direction: column;
-    margin: 2rem;
-    padding-bottom: 1rem;
-    border-bottom: solid 1.5px #79747E;
-    box-shadow: 0 3px rgba(0, 0, 0, 0.1);
-}
-
-.sort-box label{
-    font-weight: 600;
-    font-size: 1rem;
-    padding-bottom: 0.5rem;
-}
-
-.sort-box select {
-    border: 1px solid #ddd;
-    border-radius: 0.5rem;
-    padding: 0.5rem 5rem 0.5rem 1rem;
-    width: 75%;
-    outline: none;
-    cursor: pointer;
-    font-size: 14px;
-    -moz-appearance: none;
-    -webkit-appearance: none; 
-    appearance: none; 
-    background-image: url('data:image/svg+xml;charset=US-ASCII,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 10 10"><polygon points="5,8 1,2 9,2" fill="%23000"/></svg>');
-    background-repeat: no-repeat;
-    background-position: right 0.5rem center; 
-    background-size: 0.75rem;
-}
-
 .keterangan{
     margin: 1rem 2rem;
     font-size: 14px;

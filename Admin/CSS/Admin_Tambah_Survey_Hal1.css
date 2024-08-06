@@ -24,7 +24,8 @@ form label {
 }
 
 form input[type="text"],
-form textarea {
+form textarea,
+form select {
     width: 100%;
     padding: 0.5rem;
     margin-top: 0.25rem;
@@ -36,6 +37,19 @@ form textarea {
 
 form textarea {
     resize: vertical;
+}
+
+form select {
+    outline: none;
+    cursor: pointer;
+    -moz-appearance: none;
+    -webkit-appearance: none; 
+    appearance: none; 
+    background-image: url('data:image/svg+xml;charset=US-ASCII,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 10 10"><polygon points="5,8 1,2 9,2" fill="%23000"/></svg>');
+    background-repeat: no-repeat;
+    background-position: right 0.5rem center; 
+    background-size: 0.75rem;
+    
 }
 
 .upload-section {
