@@ -6,5 +6,7 @@ CREATE TABLE `user` (
     `jenis_kelamin` varchar(20) NOT NULL,
     `no_hp` varchar(20) NOT NULL,
     `password` varchar(255) NOT NULL,
-    `role` int NOT NULL
+    `role` int NOT NULL,
+    `image_profile_name` varchar(255) NOT NULL,
+    `image_profile_path` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
