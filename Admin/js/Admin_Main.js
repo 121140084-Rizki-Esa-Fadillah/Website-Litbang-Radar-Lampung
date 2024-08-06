@@ -67,10 +67,6 @@ document.addEventListener("DOMContentLoaded", function () {
                         alert("Data saved!");
                         loadContent('Admin_Manajemen_User.html');
                         break;
-                    case 'Admin_Tambah_Survey_Hal2.html':
-                        alert("Data saved!");
-                        loadContent('Admin_Tambah_Survey_Hal3.html');
-                        break;
                     case 'Admin_Edit_Keterangan_Survey.html':
                         alert("Data saved!");
                         loadContent('Admin_Hasil_Survey.html');

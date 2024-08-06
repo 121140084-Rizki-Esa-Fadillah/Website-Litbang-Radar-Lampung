@@ -1,7 +1,7 @@
 <?php
 include "Koneksi_survei_litbang.php";
 
-if (isset($_POST['submit'])) {
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $judul = $_POST['judul-survey'];
     $keterangan = $_POST['keterangan'];
     $image = $_FILES['upload-gambar']['name']; 
