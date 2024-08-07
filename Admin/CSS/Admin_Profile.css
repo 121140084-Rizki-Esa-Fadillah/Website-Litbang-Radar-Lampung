@@ -68,6 +68,11 @@
     width: 20%;
 }
 
+.edit-password:hover {
+    border: none;
+    pointer-events: none;
+}
+
 .edit button {
     color: white;
     font-size: 1rem;
@@ -87,4 +92,19 @@
     background-color: #D9D9D9; 
     color: #0C25A3;
     border: 1px solid #0C25A3;
+}
+
+.password-admin .value-password {
+    position: relative;
+    padding-right: 40px; /* Memberi ruang tambahan untuk ikon toggle */
+}
+
+.password-admin .toggle-password {
+    position: absolute;
+    right: 10px; /* Menambahkan sedikit jarak dari tepi kanan */
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    font-size: 18px; /* Sesuaikan ukuran ikon jika perlu */
+    z-index: 1; /* Memastikan ikon berada di atas konten lainnya */
 }

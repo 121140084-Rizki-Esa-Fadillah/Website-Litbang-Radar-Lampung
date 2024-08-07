@@ -32,7 +32,7 @@
 }
 
 .form-group label,
-.form-group input {
+.form-group input, {
     display: block;
     width: 100%;
     font-size: 1rem;
@@ -49,6 +49,64 @@
     width: 18rem;
     border-radius: 8px;
     border: 1px solid #0C25A3;
+}
+
+:root {
+    --arrow-bg: rgba(255, 255, 255, 0.3);
+    --arrow-icon: url(https://upload.wikimedia.org/wikipedia/commons/9/9d/Caret_down_font_awesome_whitevariation.svg);
+    --option-bg: white;
+    --select-bg: rgba(255, 255, 255, 0.2);
+  }
+  * {
+    box-sizing: border-box;
+  }
+  body {
+    display: grid;
+    place-items: center;
+    min-height: 100vh;
+    background: linear-gradient(35deg, red, purple);
+  }
+  /* <select> styles */
+  select {
+    /* Reset */
+    appearance: none;
+    border: 0;
+    outline: 0;
+    font: inherit;
+    /* Personalize */
+    width: 20rem;
+    padding: 1rem 4rem 1rem 1rem;
+    background: var(--arrow-icon) no-repeat right 0.8em center / 1.4em,
+      linear-gradient(to left, var(--arrow-bg) 3em, var(--select-bg) 3em);
+    color: white;
+    border-radius: 0.25em;
+    box-shadow: 0 0 1em 0 rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    /* Remove IE arrow */
+    &::-ms-expand {
+      display: none;
+    }
+    /* Remove focus outline */
+    &:focus {
+      outline: none;
+    }
+    /* <option> colors */
+    option {
+      color: inherit;
+      background-color: var(--option-bg);
+    }
+  }
+
+.form-group select {
+    /* Styling tambahan khusus untuk <select> jika diperlukan */
+    background-color: #ffffff; /* Warna latar belakang */
+    appearance: none; /* Menghapus gaya default dropdown */
+    /* Anda bisa menambahkan lebih banyak gaya jika diperlukan */
+}
+
+.form-group select:focus {
+    outline: none; /* Menghapus outline default saat fokus */
+    border-color: #0056b3; /* Warna border saat fokus */
 }
 
 .tombol {

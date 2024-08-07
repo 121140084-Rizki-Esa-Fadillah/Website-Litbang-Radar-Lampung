@@ -26,7 +26,7 @@
             </div>
         </div>
     </div>
-    <form>
+    <form action="../PHP/Admin_Edit_Profil.php" method="post">
         <div class="data-profile-admin">
             <div>
                 <div class="form-group">
@@ -35,7 +35,10 @@
                 </div>
                 <div class="form-group">
                     <label for="gender">Jenis Kelamin</label>
-                    <input type="text" id="gender" name="gender" placeholder="Jenis Kelamin">
+                    <select name="gender" id="gender">
+                        <option value="laki-laki">Laki-Laki</option>
+                        <option value="perempuan">Perempuan</option>
+                    </select>
                 </div>
             </div>
             <div>

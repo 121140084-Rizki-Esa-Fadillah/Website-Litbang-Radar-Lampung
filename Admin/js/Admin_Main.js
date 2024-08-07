@@ -34,7 +34,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 switch (currentPage) {
                     case 'Admin_Edit_Profil.html':
                     case 'Admin_Edit_Password.html':
-                        loadContent('Admin_Profile.html');
+                        loadContent('../PHP/Admin_Profile.php');
                         break;
                     case 'Admin_Add_User.html':
                     case 'Admin_Edit_User.html':
@@ -83,8 +83,8 @@ document.addEventListener("DOMContentLoaded", function () {
         document.querySelectorAll(".tombol-edit").forEach(editButton => {
             editButton.addEventListener("click", function () {
                 switch (currentPage) {
-                    case 'Admin_Profile.html':
-                        loadContent('Admin_Edit_Profil.html');
+                    case '../PHP/Admin_Profile.php':
+                        loadContent('../HTML/Admin_Edit_Profil.html');
                         break;
                     case 'Admin_Manajemen_User.html':
                         loadContent('Admin_Edit_User.html');
@@ -109,7 +109,7 @@ document.addEventListener("DOMContentLoaded", function () {
         if (settingsLink) {
             settingsLink.addEventListener("click", function (e) {
                 e.preventDefault();
-                loadContent('Admin_Profile.html');
+                loadContent('../PHP/Admin_Profile.php');
                 setActiveLink(e.target.parentElement);
             });
         }
