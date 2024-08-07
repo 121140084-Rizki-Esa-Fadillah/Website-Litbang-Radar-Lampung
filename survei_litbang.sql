@@ -1,10 +1,10 @@
 -- phpMyAdmin SQL Dump
--- version 5.2.0
+-- version 5.2.1
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Aug 05, 2024 at 10:21 AM
--- Server version: 10.4.27-MariaDB
+-- Generation Time: Aug 07, 2024 at 02:36 AM
+-- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
@@ -29,7 +29,6 @@ SET time_zone = "+00:00";
 
 CREATE TABLE `gender` (
   `id` int(11) NOT NULL,
-  `id_survey` int(11) NOT NULL,
   `id_wilayah` int(11) NOT NULL,
   `laki_laki_sangat_puas` int(11) NOT NULL,
   `laki_laki_puas` int(11) NOT NULL,
@@ -48,7 +47,6 @@ CREATE TABLE `gender` (
 
 CREATE TABLE `lulusan` (
   `id` int(11) NOT NULL,
-  `id_survey` int(11) NOT NULL,
   `id_wilayah` int(11) NOT NULL,
   `sd_sangat_puas` int(11) NOT NULL,
   `sd_puas` int(11) NOT NULL,
@@ -62,9 +60,9 @@ CREATE TABLE `lulusan` (
   `diploma_sangat_puas` int(11) NOT NULL,
   `diploma_puas` int(11) NOT NULL,
   `diploma_kurang_puas` int(11) NOT NULL,
-  `s1_s2_s3_sangat_puas` int(11) NOT NULL,
-  `s1_s2_s3_puas` int(11) NOT NULL,
-  `s1_s2_s3_kurang_puas` int(11) NOT NULL,
+  `sarjana_sangat_puas` int(11) NOT NULL,
+  `sarjana_puas` int(11) NOT NULL,
+  `sarjana_kurang_puas` int(11) NOT NULL,
   `total_responden` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
@@ -76,7 +74,6 @@ CREATE TABLE `lulusan` (
 
 CREATE TABLE `profesi` (
   `id` int(11) NOT NULL,
-  `id_survey` int(11) NOT NULL,
   `id_wilayah` int(11) NOT NULL,
   `pns_sangat_puas` int(11) NOT NULL,
   `pns_puas` int(11) NOT NULL,
@@ -91,21 +88,6 @@ CREATE TABLE `profesi` (
   `pengangguran_puas` int(11) NOT NULL,
   `pengangguran_kurang_puas` int(11) NOT NULL,
   `total_responden` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
-
--- --------------------------------------------------------
-
---
--- Table structure for table `respon`
---
-
-CREATE TABLE `respon` (
-  `id` int(11) NOT NULL,
-  `id_survey` int(11) NOT NULL,
-  `id_wilayah` int(11) NOT NULL,
-  `sangat_puas` int(11) NOT NULL,
-  `puas` int(11) NOT NULL,
-  `kurang_puas` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- --------------------------------------------------------
@@ -130,14 +112,13 @@ CREATE TABLE `survey` (
 
 CREATE TABLE `usia` (
   `id` int(11) NOT NULL,
-  `id_survey` int(11) NOT NULL,
   `id_wilayah` int(11) NOT NULL,
   `18_35_sangat_puas` int(11) NOT NULL,
   `18_35_puas` int(11) NOT NULL,
   `18_35_kurang_puas` int(11) NOT NULL,
-  `65_up_sangat_puas` int(11) NOT NULL,
-  `65_up_puas` int(11) NOT NULL,
-  `65_up_kurang_puas` int(11) NOT NULL,
+  `36_up_sangat_puas` int(11) NOT NULL,
+  `36_up_puas` int(11) NOT NULL,
+  `36_up_kurang_puas` int(11) NOT NULL,
   `total_responden` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
@@ -199,13 +180,6 @@ ALTER TABLE `profesi`
   ADD KEY `id_wilayah` (`id_wilayah`);
 
 --
--- Indexes for table `respon`
---
-ALTER TABLE `respon`
-  ADD PRIMARY KEY (`id`),
-  ADD KEY `id_wilayah` (`id_wilayah`);
-
---
 -- Indexes for table `survey`
 --
 ALTER TABLE `survey`
@@ -245,12 +219,6 @@ ALTER TABLE `lulusan`
 -- AUTO_INCREMENT for table `profesi`
 --
 ALTER TABLE `profesi`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
-
---
--- AUTO_INCREMENT for table `respon`
---
-ALTER TABLE `respon`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --

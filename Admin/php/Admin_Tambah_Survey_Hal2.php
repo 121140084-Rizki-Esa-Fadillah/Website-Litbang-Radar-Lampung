@@ -2,11 +2,8 @@
 include "Koneksi_survei_litbang.php";
 
 // Cek apakah form telah dikirim
-if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-    // Ambil nilai dari form
+if ($_SERVER['REQUEST_METHOD'] == 'POST') { 
     
-    
-    // Ambil nilai dari tabel
     // Tabel Gender
     $gender_sangat_puas_laki = $_POST['gender_sangat_puas_laki'];
     $gender_puas_laki = $_POST['gender_puas_laki'];
@@ -98,7 +95,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         mysqli_query($conn, $query3) &&
         mysqli_query($conn, $query4)) {
         // Redirect to Admin_Main.html with query parameters
-        header('Location: ../HTML/Admin_Main.html?page=Admin_Tambah_Survey_Hal3.html&status=success');
+        header('Location: ../HTML/Admin_Main.html?page=../php/Admin_Tambah_Survey_Hal3.php&status=success');
         exit();
     } else {
         echo "Gagal menyimpan data: " . mysqli_error($conn);
