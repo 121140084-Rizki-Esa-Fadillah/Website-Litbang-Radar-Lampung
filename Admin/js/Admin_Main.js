@@ -67,10 +67,6 @@ document.addEventListener("DOMContentLoaded", function () {
                         alert("Data saved!");
                         loadContent('Admin_Manajemen_User.html');
                         break;
-                    case 'Admin_Tambah_Survey_Hal2.html':
-                        alert("Data saved!");
-                        loadContent('Admin_Tambah_Survey_Hal3.html');
-                        break;
                     case 'Admin_Edit_Keterangan_Survey.html':
                         alert("Data saved!");
                         loadContent('Admin_Hasil_Survey.html');
@@ -142,7 +138,7 @@ document.addEventListener("DOMContentLoaded", function () {
         });
 
         // Initialize event listener specific to loaded page
-        if (currentPage === 'Admin_Tambah_Survey_Hal3.html' || currentPage.startsWith('Admin_Detail_Hasil_Survey.html')) {
+        if (currentPage === '../php/Admin_Tambah_Survey_Hal3.php' || currentPage.startsWith('Admin_Detail_Hasil_Survey.html')) {
             const tableButton = document.getElementById('table-button');
             const chartButton = document.getElementById('chart-button');
             const tableDiv = document.getElementById('table');
