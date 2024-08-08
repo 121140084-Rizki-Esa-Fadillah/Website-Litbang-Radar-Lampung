@@ -32,8 +32,8 @@ document.addEventListener("DOMContentLoaded", function () {
         document.querySelectorAll(".tombol-cancel").forEach(cancelButton => {
             cancelButton.addEventListener("click", function () {
                 switch (currentPage) {
-                    case 'Admin_Edit_Profil.html':
-                    case 'Admin_Edit_Password.html':
+                    case '../PHP/Admin_Edit_Profil.php':
+                    case '../PHP/Admin_Edit_Password.php':
                         loadContent('../PHP/Admin_Profile.php');
                         break;
                     case 'Admin_Add_User.html':
@@ -57,10 +57,10 @@ document.addEventListener("DOMContentLoaded", function () {
         document.querySelectorAll(".tombol-save").forEach(saveButton => {
             saveButton.addEventListener("click", function () {
                 switch (currentPage) {
-                    case 'Admin_Edit_Profil.html':
+                    case '../PHP/Admin_Edit_Profil.php':
                     case 'Admin_Edit_Password.html':
                         alert("Data saved!");
-                        loadContent('Admin_Profile.html');
+                        loadContent('Admin_Profile.php');
                         break;
                     case 'Admin_Add_User.html':
                     case 'Admin_Edit_User.html':
@@ -80,7 +80,7 @@ document.addEventListener("DOMContentLoaded", function () {
             editButton.addEventListener("click", function () {
                 switch (currentPage) {
                     case '../PHP/Admin_Profile.php':
-                        loadContent('../HTML/Admin_Edit_Profil.html');
+                        loadContent('../PHP/Admin_Edit_Profil.php');
                         break;
                     case 'Admin_Manajemen_User.html':
                         loadContent('Admin_Edit_User.html');
