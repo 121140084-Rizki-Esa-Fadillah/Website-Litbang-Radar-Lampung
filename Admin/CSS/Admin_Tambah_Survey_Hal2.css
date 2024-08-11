@@ -22,7 +22,7 @@
 
 table {
     border-collapse: collapse; 
-    width: 80%; 
+    width: 100%; 
     font-size: 14px;
 }
 
@@ -37,14 +37,20 @@ td input{
     outline: none;
     background-color: transparent;
     text-align: center;
-    
+    width: 7.5rem;
 }
 
 th {
     background-color: #E2D3EB;
     color: black;
-    width: 25%;
+    padding: 0.25rem;
 }
+
+th:nth-child(1), 
+td:nth-child(1){
+    width: 10rem;
+}
+
 
 .save {
     display: flex;

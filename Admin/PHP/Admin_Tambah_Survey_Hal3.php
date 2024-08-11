@@ -77,6 +77,8 @@
                               <th>Sangat Puas</th>
                               <th>Puas</th>
                               <th>Kurang Puas</th>
+                              <th>Sangat Kurang Puas</th>
+                              <th>Total</th>
                         </tr>
                   </thead>
                   <tbody>
@@ -88,12 +90,32 @@
                                         <td>{$rowGender['laki_laki_sangat_puas']}</td>
                                         <td>{$rowGender['laki_laki_puas']}</td>
                                         <td>{$rowGender['laki_laki_kurang_puas']}</td>
+                                        <td>{$rowGender['laki_laki_sangat_kurang_puas']}</td>
+                                        <td>{$rowGender['total_responden_laki_laki']}</td>
                                     </tr>
                                     <tr>
                                         <td>Perempuan</td>
                                         <td>{$rowGender['perempuan_sangat_puas']}</td>
                                         <td>{$rowGender['perempuan_puas']}</td>
                                         <td>{$rowGender['perempuan_kurang_puas']}</td>
+                                        <td>{$rowGender['perempuan_sangat_kurang_puas']}</td>
+                                        <td>{$rowGender['total_responden_perempuan']}</td>
+                                    </tr>
+                                    <tr>
+                                          <td>Total</td>
+                                          <td>{$rowGender['total_sangat_puas_gender']}</td>
+                                          <td>{$rowGender['total_puas_gender']}</td>
+                                          <td>{$rowGender['total_kurang_puas_gender']}</td>
+                                          <td>{$rowGender['total_sangat_kurang_puas_gender']}</td>
+                                          <td>{$rowGender['total_responden_gender']}</td>
+                                    </tr>
+                                    <tr>
+                                          <td>Persentase</td>
+                                          <td>{$rowGender['persentase_sangat_puas_gender']}%</td>
+                                          <td>{$rowGender['persentase_puas_gender']}%</td>
+                                          <td>{$rowGender['persentase_kurang_puas_gender']}%</td>
+                                          <td>{$rowGender['persentase_sangat_kurang_puas_gender']}%</td>
+                                          <td>{$rowGender['total_persentase_gender']}%</td>
                                     </tr>";
                         }
                         ?>
@@ -107,6 +129,8 @@
                               <th>Sangat Puas</th>
                               <th>Puas</th>
                               <th>Kurang Puas</th>
+                              <th>Sangat Kurang Puas</th>
+                              <th>Total</th>
                         </tr>
                   </thead>
                   <tbody>
@@ -118,12 +142,32 @@
                                         <td>{$rowUsia['18_35_sangat_puas']}</td>
                                         <td>{$rowUsia['18_35_puas']}</td>
                                         <td>{$rowUsia['18_35_kurang_puas']}</td>
+                                        <td>{$rowUsia['18_35_sangat_kurang_puas']}</td>
+                                        <td>{$rowUsia['total_responden_18_35']}</td>
                                     </tr>
                                     <tr>
                                         <td>36 Tahun ke atas</td>
                                         <td>{$rowUsia['36_up_sangat_puas']}</td>
                                         <td>{$rowUsia['36_up_puas']}</td>
                                         <td>{$rowUsia['36_up_kurang_puas']}</td>
+                                        <td>{$rowUsia['36_up_sangat_kurang_puas']}</td>
+                                        <td>{$rowUsia['total_responden_36_up']}</td>
+                                    </tr>
+                                    <tr>
+                                          <td>Total</td>
+                                          <td>{$rowUsia['total_sangat_puas_usia']}</td>
+                                          <td>{$rowUsia['total_puas_usia']}</td>
+                                          <td>{$rowUsia['total_kurang_puas_usia']}</td>
+                                          <td>{$rowUsia['total_sangat_kurang_puas_usia']}</td>
+                                          <td>{$rowUsia['total_responden_usia']}</td>
+                                    </tr>
+                                    <tr>
+                                          <td>Persentase</td>
+                                          <td>{$rowUsia['persentase_sangat_puas_usia']}%</td>
+                                          <td>{$rowUsia['persentase_puas_usia']}%</td>
+                                          <td>{$rowUsia['persentase_kurang_puas_usia']}%</td>
+                                          <td>{$rowUsia['persentase_sangat_kurang_puas_usia']}%</td>
+                                          <td>{$rowUsia['total_persentase_usia']}%</td>
                                     </tr>";
                         }
                         ?>
@@ -137,6 +181,8 @@
                               <th>Sangat Puas</th>
                               <th>Puas</th>
                               <th>Kurang Puas</th>
+                              <th>Sangat Kurang Puas</th>
+                              <th>Total</th>
                         </tr>
                   </thead>
                   <tbody>
@@ -148,30 +194,56 @@
                                         <td>{$rowLulusan['sd_sangat_puas']}</td>
                                         <td>{$rowLulusan['sd_puas']}</td>
                                         <td>{$rowLulusan['sd_kurang_puas']}</td>
+                                        <td>{$rowLulusan['sd_sangat_kurang_puas']}</td>
+                                        <td>{$rowLulusan['total_responden_sd']}</td>
                                     </tr>
                                     <tr>
                                         <td>SMP</td>
                                         <td>{$rowLulusan['smp_sangat_puas']}</td>
                                         <td>{$rowLulusan['smp_puas']}</td>
                                         <td>{$rowLulusan['smp_kurang_puas']}</td>
+                                        <td>{$rowLulusan['smp_sangat_kurang_puas']}</td>
+                                        <td>{$rowLulusan['total_responden_smp']}</td>
                                     </tr>
                                     <tr>
                                         <td>SMA</td>
                                         <td>{$rowLulusan['sma_sangat_puas']}</td>
                                         <td>{$rowLulusan['sma_puas']}</td>
                                         <td>{$rowLulusan['sma_kurang_puas']}</td>
+                                        <td>{$rowLulusan['sma_sangat_kurang_puas']}</td>
+                                        <td>{$rowLulusan['total_responden_sma']}</td>
                                     </tr>
                                     <tr>
                                         <td>Diploma</td>
                                         <td>{$rowLulusan['diploma_sangat_puas']}</td>
                                         <td>{$rowLulusan['diploma_puas']}</td>
                                         <td>{$rowLulusan['diploma_kurang_puas']}</td>
+                                        <td>{$rowLulusan['diploma_sangat_kurang_puas']}</td>
+                                        <td>{$rowLulusan['total_responden_diploma']}</td>
                                     </tr>
                                     <tr>
                                         <td>S1/S2/S3</td>
                                         <td>{$rowLulusan['sarjana_sangat_puas']}</td>
                                         <td>{$rowLulusan['sarjana_puas']}</td>
                                         <td>{$rowLulusan['sarjana_kurang_puas']}</td>
+                                        <td>{$rowLulusan['sarjana_sangat_kurang_puas']}</td>
+                                        <td>{$rowLulusan['total_responden_sarjana']}</td>
+                                    </tr>
+                                    <tr>
+                                          <td>Total</td>
+                                          <td>{$rowLulusan['total_sangat_puas_lulusan']}</td>
+                                          <td>{$rowLulusan['total_puas_lulusan']}</td>
+                                          <td>{$rowLulusan['total_kurang_puas_lulusan']}</td>
+                                          <td>{$rowLulusan['total_sangat_kurang_puas_lulusan']}</td>
+                                          <td>{$rowLulusan['total_responden_lulusan']}</td>
+                                    </tr>
+                                    <tr>
+                                          <td>Persentase</td>
+                                          <td>{$rowLulusan['persentase_sangat_puas_lulusan']}%</td>
+                                          <td>{$rowLulusan['persentase_puas_lulusan']}%</td>
+                                          <td>{$rowLulusan['persentase_kurang_puas_lulusan']}%</td>
+                                          <td>{$rowLulusan['persentase_sangat_kurang_puas_lulusan']}%</td>
+                                          <td>{$rowLulusan['total_persentase_lulusan']}%</td>
                                     </tr>";
                             }
                         ?>
@@ -185,6 +257,8 @@
                               <th>Sangat Puas</th>
                               <th>Puas</th>
                               <th>Kurang Puas</th>
+                              <th>Sangat Kurang Puas</th>
+                              <th>Total</th>
                         </tr>
                   </thead>
                   <tbody>
@@ -196,24 +270,48 @@
                                         <td>{$rowProfesi['pns_sangat_puas']}</td>
                                         <td>{$rowProfesi['pns_puas']}</td>
                                         <td>{$rowProfesi['pns_kurang_puas']}</td>
+                                        <td>{$rowProfesi['pns_sangat_kurang_puas']}</td>
+                                        <td>{$rowProfesi['total_responden_pns']}</td>
                                     </tr>
                                     <tr>
                                         <td>Swasta/Wiraswasta</td>
                                         <td>{$rowProfesi['swasta_wiraswasta_sangat_puas']}</td>
                                         <td>{$rowProfesi['swasta_wiraswasta_puas']}</td>
                                         <td>{$rowProfesi['swasta_wiraswasta_kurang_puas']}</td>
+                                        <td>{$rowProfesi['swasta_wiraswasta_sangat_kurang_puas']}</td>
+                                        <td>{$rowProfesi['total_responden_swasta_wiraswasta']}</td>
                                     </tr>
                                     <tr>
                                         <td>Pelajar/Mahasiswa</td>
                                         <td>{$rowProfesi['pelajar_mahasiswa_sangat_puas']}</td>
                                         <td>{$rowProfesi['pelajar_mahasiswa_puas']}</td>
                                         <td>{$rowProfesi['pelajar_mahasiswa_kurang_puas']}</td>
+                                        <td>{$rowProfesi['pelajar_mahasiswa_sangat_kurang_puas']}</td>
+                                        <td>{$rowProfesi['total_responden_pelajar_mahasiswa']}</td>
                                     </tr>
                                     <tr>
                                         <td>Pengangguran</td>
                                         <td>{$rowProfesi['pengangguran_sangat_puas']}</td>
                                         <td>{$rowProfesi['pengangguran_puas']}</td>
                                         <td>{$rowProfesi['pengangguran_kurang_puas']}</td>
+                                        <td>{$rowProfesi['pengangguran_sangat_kurang_puas']}</td>
+                                        <td>{$rowProfesi['total_responden_pengangguran']}</td>
+                                    </tr>
+                                    <tr>
+                                          <td>Total</td>
+                                          <td>{$rowProfesi['total_sangat_puas_profesi']}</td>
+                                          <td>{$rowProfesi['total_puas_profesi']}</td>
+                                          <td>{$rowProfesi['total_kurang_puas_profesi']}</td>
+                                          <td>{$rowProfesi['total_sangat_kurang_puas_profesi']}</td>
+                                          <td>{$rowProfesi['total_responden_profesi']}</td>
+                                    </tr>
+                                    <tr>
+                                          <td>Persentase</td>
+                                          <td>{$rowProfesi['persentase_sangat_puas_profesi']}%</td>
+                                          <td>{$rowProfesi['persentase_puas_profesi']}%</td>
+                                          <td>{$rowProfesi['persentase_kurang_puas_profesi']}%</td>
+                                          <td>{$rowProfesi['persentase_sangat_kurang_puas_profesi']}%</td>
+                                          <td>{$rowProfesi['total_persentase_profesi']}%</td>
                                     </tr>";
                         }
                         ?>
