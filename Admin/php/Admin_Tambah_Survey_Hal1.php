@@ -15,7 +15,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
         if (mysqli_query($conn, $query)) {
             // Redirect to Admin_Main.html with query parameters
-            header('Location: ../HTML/Admin_Main.html?page=Admin_Tambah_Survey_Hal2.html&status=success');
+            header('Location: ../HTML/Admin_Main.html?page=../HTML/Admin_Tambah_Survey_Hal2.html&status=success');
             exit();
         } else {
             // Redirect with error message
