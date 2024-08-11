@@ -32,9 +32,9 @@ document.addEventListener("DOMContentLoaded", function () {
         document.querySelectorAll(".tombol-cancel").forEach(cancelButton => {
             cancelButton.addEventListener("click", function () {
                 switch (currentPage) {
-                    case 'Admin_Edit_Profil.html':
+                    case '../PHP/Admin_Edit_Profil.php':
                     case 'Admin_Edit_Password.html':
-                        loadContent('Admin_Profile.html');
+                        loadContent('../PHP/Admin_Profile.php');
                         break;
                     case 'Admin_Add_User.html':
                     case 'Admin_Edit_User.html':
@@ -57,11 +57,6 @@ document.addEventListener("DOMContentLoaded", function () {
         document.querySelectorAll(".tombol-save").forEach(saveButton => {
             saveButton.addEventListener("click", function () {
                 switch (currentPage) {
-                    case 'Admin_Edit_Profil.html':
-                    case 'Admin_Edit_Password.html':
-                        alert("Data saved!");
-                        loadContent('Admin_Profile.html');
-                        break;
                     case 'Admin_Add_User.html':
                     case 'Admin_Edit_User.html':
                         alert("Data saved!");
@@ -79,8 +74,8 @@ document.addEventListener("DOMContentLoaded", function () {
         document.querySelectorAll(".tombol-edit").forEach(editButton => {
             editButton.addEventListener("click", function () {
                 switch (currentPage) {
-                    case 'Admin_Profile.html':
-                        loadContent('Admin_Edit_Profil.html');
+                    case '../PHP/Admin_Profile.php':
+                        loadContent('../PHP/Admin_Edit_Profil.php');
                         break;
                     case 'Admin_Manajemen_User.html':
                         loadContent('Admin_Edit_User.html');
@@ -105,7 +100,7 @@ document.addEventListener("DOMContentLoaded", function () {
         if (settingsLink) {
             settingsLink.addEventListener("click", function (e) {
                 e.preventDefault();
-                loadContent('Admin_Profile.html');
+                loadContent('../PHP/Admin_Profile.php');
                 setActiveLink(e.target.parentElement);
             });
         }
@@ -161,6 +156,20 @@ document.addEventListener("DOMContentLoaded", function () {
             tableButton.addEventListener('click', () => showTab('table'));
             chartButton.addEventListener('click', () => showTab('chart'));
             showTab('table'); // Set default tab
+        }
+
+        if (currentPage === 'Admin_Edit_Password.html') {
+            // Periksa apakah ada parameter 'error' di URL
+            const urlParams = new URLSearchParams(window.location.search);
+            const error = urlParams.get('error');
+            
+            console.log('Error parameter:', error); // Debugging log
+
+            if (error === 'invalid_password_old') {
+                alert('Password lama salah');
+            } else if (error === 'invalid_password_new') {
+                alert('Confirm password salah');
+            }
         }
     }
 
