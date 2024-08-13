@@ -48,7 +48,22 @@ $conn->close();
             <?php if (!empty($user['image_profile_path'])): ?>
                 <img src="<?php echo htmlspecialchars($user['image_profile_path']); ?>" alt="Foto Profil" style="width: 100px; height: 100px; border-radius: 50%;">
             <?php else: ?>
-                <i class="fa-solid fa-circle-user"></i>
+                <form action="Admin_Upload_Profile_Image.php" method="post" enctype="multipart/form-data">
+                <i class="fa-solid fa-circle-user" id="open-modal-btn" style="cursor: pointer; font-size: 24px;"></i>
+
+<!-- The Modal -->
+<div id="profile-modal" class="modal">
+    <!-- Modal content -->
+    <div class="modal-content">
+        <span class="close" id="close-modal-btn">&times;</span>
+        <h2>Upload Profile Image</h2>
+        <form id="upload-form" action="Admin_Upload_Profile_Image.php" method="post" enctype="multipart/form-data">
+            <input type="file" id="file-input" name="profile_image" accept="image/*">
+            <button type="submit">Upload</button>
+        </form>
+    </div>
+</div>
+                </form>
             <?php endif; ?>
         </div>
         <div class="username-status-admin">
@@ -95,6 +110,34 @@ $conn->close();
         </button>
     </div>
 </form>
+
+<script>
+        // Get the modal
+        var modal = document.getElementById('profile-modal');
+
+        // Get the button that opens the modal
+        var openModalBtn = document.getElementById('open-modal-btn');
+
+        // Get the <span> element that closes the modal
+        var closeModalBtn = document.getElementById('close-modal-btn');
+
+        // When the user clicks on the button, open the modal
+        openModalBtn.onclick = function() {
+            modal.style.display = 'block';
+        }
+
+        // When the user clicks on <span> (x), close the modal
+        closeModalBtn.onclick = function() {
+            modal.style.display = 'none';
+        }
+
+        // When the user clicks anywhere outside of the modal, close it
+        window.onclick = function(event) {
+            if (event.target == modal) {
+                modal.style.display = 'none';
+            }
+        }
+    </script>
 
 </body>
 </html>
