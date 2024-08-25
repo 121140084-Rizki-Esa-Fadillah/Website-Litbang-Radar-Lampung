@@ -2,12 +2,12 @@
 session_start();
 include('Koneksi_user_litbang.php');
 
-if (!isset($_SESSION['username'])) {
-    header("Location: ../HTML/Admin_Login.html");
+if (!isset($_SESSION['id_user'])) {
+    header("Location: Admin_Login.php");
     exit();
 }
 
-$username = $_SESSION['username'];
+$id = $_SESSION['id_user'];
 
 // Cek apakah file diunggah
 if (isset($_FILES['profile-image']) && $_FILES['profile-image']['error'] === UPLOAD_ERR_OK) {
@@ -18,25 +18,24 @@ if (isset($_FILES['profile-image']) && $_FILES['profile-image']['error'] === UPL
     $fileNameCmps = explode(".", $fileName);
     $fileExtension = strtolower(end($fileNameCmps));
 
-    // Tentukan path file upload
-    $uploadFileDir = 'C:\xampp\htdocs\Website-Litbang-Radar-Lampung\image\foto-profile';
+    $uploadFileDir = realpath(__DIR__ . '/../../image/foto-profile') . '/';
     $newFileName = md5(time() . $fileName) . '.' . $fileExtension;
     $dest_path = $uploadFileDir . $newFileName;
+    // Path relatif yang akan disimpan ke database
+    $dest_path_rel = '../../image/foto-profile/' . $newFileName;
 
-    // Validasi ekstensi file
     $allowedExts = array('jpg', 'jpeg', 'png');
     if (in_array($fileExtension, $allowedExts)) {
-        if (move_uploaded_file($fileTmpPath, $dest_path)) {
-            // Update database
-            $stmt = $conn->prepare("UPDATE user SET image_profile_name = ?, image_profile_path = ? WHERE username = ?");
-            $stmt->bind_param('sss', $fileName, $dest_path, $username);
-            
+        if (is_dir($uploadFileDir) && move_uploaded_file($fileTmpPath, $dest_path)) {
+            $sql_update = "UPDATE user SET image_profile_name = ?, image_profile_path = ? WHERE id_user = ?";
+            $stmt = $conn->prepare($sql_update);
+            $stmt->bind_param('ssi', $fileName, $dest_path_rel, $id);
             if ($stmt->execute()) {
-                header("Location: ../HTML/Admin_Main.html?page=Admin_Profile.php&status=upload_success");
+                header("Location: Admin_Edit_Profile.php");
+                exit();
             } else {
-                echo "Error updating record: " . $conn->error;
+                echo "Error updating record: " . $stmt->error;
             }
-
             $stmt->close();
         } else {
             echo "Error moving the uploaded file.";

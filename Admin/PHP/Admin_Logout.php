@@ -3,5 +3,5 @@ session_start();
 
 session_destroy();
 
-header("Location: ../HTML/Admin_Login.html");
+header("Location: Admin_Login.php");
 ?>

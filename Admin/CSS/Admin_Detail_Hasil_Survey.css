@@ -1,7 +1,9 @@
-* {
-      font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-      letter-spacing: 0.5px;
-  }
+body {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    letter-spacing: 0.5px;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
   
   .tambah_survei{
       text-align: left;
@@ -95,9 +97,9 @@
   }
   
   .table {
-      width: 80%;
+      width: 90%;
       overflow-x: auto;
-      margin: 1rem 5rem;
+      margin: 1rem 2rem;
   }
   
   table {
@@ -133,7 +135,28 @@
   
   .grafik {
       margin-left: 2rem;
+      width: 50%;
+      height: auto;
   }
+
+  canvas {
+    border: 1px solid #000;
+    box-sizing: border-box;
+    padding: 1rem 3rem 0 0;
+  }
+
+.chart-area {
+    display: flex;
+    gap: 3rem;
+    margin-bottom: 1rem;
+    
+}
+
+.chart-area ul {
+    padding-left: 1rem;
+    min-width: 25rem;
+    min-height: 20rem;
+}
   
   .actions {
       margin: 2rem;

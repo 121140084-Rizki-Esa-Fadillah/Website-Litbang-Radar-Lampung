@@ -1,42 +1,34 @@
 <?php
 session_start();
 
-include('koneksi_user_litbang.php');
+include('Koneksi_user_litbang.php');
 
-if (!isset($_SESSION['username'])) {
-    header("Location: ../HTML/Admin_Login.html");
+if (!isset($_SESSION['id_user'])) {
+    header("Location: Admin_Login.php");
     exit();
 }
 
-$username = $_SESSION['username'];
+$id = $_SESSION['id_user'];
 
-// Dapatkan ID pengguna berdasarkan username
-$sql = "SELECT id FROM user WHERE username='$username'";
-$result = $conn->query($sql);
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $nama_lengkap = $_POST['fullname'];
+    $email = $_POST['email'];
+    $jenis_kelamin = $_POST['gender'];
+    $no_hp = $_POST['no-hp'];
 
-if ($result->num_rows > 0) {
-    // Ambil ID dari hasil query
-    $row = $result->fetch_assoc();
-    $id = $row['id'];
-
-    if ($_SERVER["REQUEST_METHOD"] == "POST") {
-        $nama_lengkap = $_POST['fullname'];
-        $email = $_POST['email'];
-        $jenis_kelamin = $_POST['gender'];
-        $no_hp = $_POST['no-hp'];
-
-        // Update data pengguna berdasarkan ID
-        $sql_update = "UPDATE user SET nama_lengkap='$nama_lengkap', email='$email', jenis_kelamin='$jenis_kelamin', no_hp='$no_hp' WHERE id=$id";
-
-        if ($conn->query($sql_update) === TRUE) {
-            header("Location: ../HTML/Admin_Main.html?page=../PHP/Admin_Profile.php&status=success");
-            exit();
-        } else {
-            echo "Error updating record: " . $conn->error;
-        }
+    // Update data pengguna berdasarkan ID
+    $sql_update = "UPDATE user SET nama_lengkap='$nama_lengkap', email='$email', jenis_kelamin='$jenis_kelamin', no_hp='$no_hp' WHERE id_user=$id";
+    
+    if ($conn->query($sql_update) === TRUE) {
+        // Set notification message in session
+        $_SESSION['notification'] = "Data berhasil diperbarui.";
+        header("Location: Admin_Profile.php");
+        exit();
+    } else {
+        $_SESSION['notification'] = "Gagal memperbarui data: " . $conn->error;
+        header("Location: Admin_Profile.php");
+        exit();
     }
-} else {
-    echo "User not found";
 }
 
 $conn->close();
