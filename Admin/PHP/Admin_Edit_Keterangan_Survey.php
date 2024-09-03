@@ -6,8 +6,9 @@ session_start(); // Start the session to use session variables
 $error_message = '';
 $success = false;
 
+$id = isset($_GET['id']) ? intval($_GET['id']) : 0;
+
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $id = $_POST['id'];
     $judul = $_POST['judul-survey'];
     $keterangan = $_POST['keterangan'];
     $id_wilayah = $_POST['id_wilayah'];
@@ -45,9 +46,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     mysqli_close($conn);
 
     if ($success) {
-        // Set notification message in session
-        $_SESSION['notification'] = "Data berhasil diperbarui.";
-        header("Location: Admin_Hasil_Survey.php");
+      header("Location: Admin_Edit_Data_Survey.php?id=" . $id);
         exit();
     } else {
         echo '<script>
@@ -57,8 +56,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         exit();
     }
 }
-
-$id = isset($_GET['id']) ? intval($_GET['id']) : 0;
 
 if ($id > 0) {
     $stmt = $conn->prepare("SELECT title, keterangan, id_wilayah, image FROM survey WHERE id = ?");
@@ -102,7 +99,6 @@ if ($id > 0) {
             <div class="form-section">
                   <h2>Edit Data Survey</h2>
                   <form action="" method="post" enctype="multipart/form-data">
-                        <input type="hidden" name="id" value="<?php echo htmlspecialchars($id); ?>">
 
                         <label for="judul-survey">Judul Survey:</label>
                         <input type="text" id="judul-survey" name="judul-survey"
@@ -162,8 +158,8 @@ if ($id > 0) {
                                     <strong>Kembali</strong>
                               </a>
                               <button class="tombol-save">
-                                    <i class="fa-regular fa-floppy-disk"></i>
-                                    <strong>Simpan</strong>
+                                    <strong>Lanjut</strong>
+                                    <i class="fa-solid fa-arrow-right"></i>
                               </button>
                         </div>
                   </form>

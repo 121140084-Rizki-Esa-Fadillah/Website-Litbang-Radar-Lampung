@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Aug 26, 2024 at 02:47 PM
+-- Generation Time: Aug 26, 2024 at 03:28 PM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -47,8 +47,7 @@ CREATE TABLE `user` (
 --
 
 INSERT INTO `user` (`id_user`, `username`, `nama_lengkap`, `email`, `jenis_kelamin`, `no_hp`, `password`, `role`, `registered`, `last_login`, `image_profile_name`, `image_profile_path`) VALUES
-(1, 'Admin', 'Admin Website Litbang', 'radarlitbang_123@gmail.com', 'Laki-Laki', '081234567890', 'Admin123', 'Admin', '2024-08-17 23:55:06', '2024-08-25 15:29:58', 'radar-logo.jpg', '../../image/foto-profile/5eebc546f3260d3f802792d925436f0e.jpg'),
-(5, 'User', 'User Website Litbang', 'userlitbang@yahoo.com', 'Laki-Laki', '081122334455', 'User_123', 'User', '2024-08-25 22:30:37', '2024-08-25 15:31:40', 'radar-logo.jpg', '../../image/foto-profile/49da432c4fa61cdfce9d1936a1971bb0.jpg');
+(1, 'Admin', 'Admin Website Litbang', 'radarlitbang_123@gmail.com', 'Laki-Laki', '081234567890', 'Admin123', 'Admin', '2024-08-17 23:55:06', '2024-08-25 15:29:58', 'radar-logo.jpg', '../../image/foto-profile/5eebc546f3260d3f802792d925436f0e.jpg');
 
 --
 -- Indexes for dumped tables
@@ -68,7 +67,7 @@ ALTER TABLE `user`
 -- AUTO_INCREMENT for table `user`
 --
 ALTER TABLE `user`
-  MODIFY `id_user` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id_user` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

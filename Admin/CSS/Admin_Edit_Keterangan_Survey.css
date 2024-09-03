@@ -86,8 +86,7 @@ form select {
 .tombol {
     margin: 2rem 2rem 1.5rem 0;
     display: flex;
-    justify-content: flex-end;
-    gap: 2.5rem;
+    justify-content: space-between;
 }
 
 .tombol-cancel {
