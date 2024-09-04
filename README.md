@@ -1,2 +1,7 @@
 # Website-Litbang-Radar-Lampung
 Proyek website ini dibuat untuk memenuhi tugas PKL ITERA
+
+# Panduan Web Litbang
+Pastikan Import file user_litbang.sql dan survei_litbang.sql
+Pada file user_litbang.sql sudah dibuat 1 akun dummy dengan role Admin, jadi untuk pertama kali memakai web litbang dapat masuk dengan akun dummy tersebut
+
