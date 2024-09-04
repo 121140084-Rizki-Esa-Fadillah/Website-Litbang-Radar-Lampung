@@ -1,5 +1,22 @@
 document.addEventListener("DOMContentLoaded", function () {
-    // Initialize listeners for dropdowns and sidebar
+    let hasUnsavedData = false;
+
+    // Function to set the active link in the sidebar
+    function setActiveLink() {
+        const currentPage = window.location.pathname.split('/').pop();
+        const links = document.querySelectorAll("nav ul li a");
+
+        links.forEach(link => {
+            const href = link.getAttribute('href').split('/').pop(); // Get the file name from href
+            if (currentPage === href) {
+                link.parentElement.classList.add('active');
+            } else {
+                link.parentElement.classList.remove('active');
+            }
+        });
+    }
+
+    // Function to initialize listeners for dropdowns and sidebar
     function initializeListeners() {
         // Initialize header listeners
         const akun = document.querySelector('.akun');
@@ -38,20 +55,32 @@ document.addEventListener("DOMContentLoaded", function () {
                 }
             });
         }
-    }
 
-    // Function to set the active link in the sidebar
-    function setActiveLink() {
-        const currentPage = window.location.pathname.split('/').pop();
-        const links = document.querySelectorAll("nav ul li a");
+        // Initialize menu item listeners with confirmation
+        const menuItems = document.querySelectorAll("nav ul li a, .akun a"); // Select all menu items
 
-        links.forEach(link => {
-            const href = link.getAttribute('href').split('/').pop(); // Get the file name from href
-            if (currentPage === href) {
-                link.parentElement.classList.add('active');
-            } else {
-                link.parentElement.classList.remove('active');
-            }
+        menuItems.forEach(item => {
+            item.addEventListener("click", function (e) {
+                const currentPage = window.location.pathname.split('/').pop();
+                const unsavedPages = ['Admin_Tambah_Survey_Hal1.php', 'Admin_Tambah_Survey_Hal2.php', 'Admin_Tambah_Survey_Hal3.php'];
+
+                if (unsavedPages.includes(currentPage) && hasUnsavedData) {
+                    e.preventDefault(); // Prevent default anchor click behavior
+
+                    if (confirm("Anda memiliki data yang belum disimpan. Jika Anda keluar, data yang belum disimpan akan hilang. Apakah Anda yakin ingin melanjutkan?")) {
+                        // AJAX call to unset session data
+                        fetch('unset_session.php', {
+                            method: 'GET',
+                        })
+                        .then(response => response.text())
+                        .then(data => {
+                            console.log(data); // Log response from PHP (for debugging)
+                            window.location.href = this.getAttribute('href'); // Redirect to the clicked menu item
+                        })
+                        .catch(error => console.error('Error unsetting session:', error));
+                    }
+                }
+            });
         });
     }
 
@@ -76,6 +105,18 @@ document.addEventListener("DOMContentLoaded", function () {
             window.location.href = "../PHP/Admin_Logout.php"; // Redirect to logout page if confirmed
         }
     };
+
+    // Function to update unsaved data flag
+    function updateUnsavedDataFlag(isUnsaved) {
+        hasUnsavedData = isUnsaved;
+    }
+
+    // Example: call this function when form data changes
+    document.querySelectorAll('form').forEach(form => {
+        form.addEventListener('input', function () {
+            updateUnsavedDataFlag(true); // Set flag to true if data is changed
+        });
+    });
 
     // Load header HTML and initialize listeners
     loadHTML('header', 'Main.php');

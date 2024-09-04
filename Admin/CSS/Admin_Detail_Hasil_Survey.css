@@ -147,15 +147,18 @@ body {
 
 .chart-area {
     display: flex;
-    gap: 3rem;
+    gap: 2rem;
     margin-bottom: 1rem;
-    
 }
 
 .chart-area ul {
     padding-left: 1rem;
-    min-width: 25rem;
+    min-width: 27rem;
     min-height: 20rem;
+}
+
+.chart-area ul li{
+    padding-bottom: 1rem;
 }
   
   .actions {

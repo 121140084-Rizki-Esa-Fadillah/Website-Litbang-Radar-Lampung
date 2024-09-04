@@ -400,19 +400,27 @@ mysqli_close($conn);
                         <div class="chart-area">
                               <canvas id="laki_laki"></canvas>
                               <div>
-                                    <h4>Keterangan</h4><br>
+                                    <h4>Keterangan (Gender Laki-Laki)</h4><br>
                                     <ul>
-                                          <li>Jumlah Responden Sangat Puas :
+                                          <li>Responden Sangat Puas :
                                                 <?php echo htmlspecialchars($genderData['laki_laki_sangat_puas']); ?>
+                                                Orang
+                                                (<?php echo number_format(($genderData['laki_laki_sangat_puas'] / $genderData['total_responden_laki_laki']) * 100,2); ?>%)
                                           </li>
-                                          <li>Jumlah Responden Puas :
+                                          <li>Responden Puas :
                                                 <?php echo htmlspecialchars($genderData['laki_laki_puas']); ?>
+                                                Orang
+                                                (<?php echo number_format(($genderData['laki_laki_puas'] / $genderData['total_responden_laki_laki']) * 100,2); ?>%)
                                           </li>
-                                          <li>Jumlah Responden Kurang Puas :
+                                          <li>Responden Kurang Puas :
                                                 <?php echo htmlspecialchars($genderData['laki_laki_kurang_puas']); ?>
+                                                Orang
+                                                (<?php echo number_format(($genderData['laki_laki_kurang_puas'] / $genderData['total_responden_laki_laki']) * 100,2); ?>%)
                                           </li>
-                                          <li>Jumlah Responden Sangat Kurang Puas :
+                                          <li>Responden Sangat Kurang Puas :
                                                 <?php echo htmlspecialchars($genderData['laki_laki_sangat_kurang_puas']); ?>
+                                                Orang
+                                                (<?php echo number_format(($genderData['laki_laki_sangat_kurang_puas'] / $genderData['total_responden_laki_laki']) * 100,2); ?>%)
                                           </li>
                                     </ul>
                               </div>
@@ -420,19 +428,27 @@ mysqli_close($conn);
                         <div class="chart-area">
                               <canvas id="perempuan"></canvas>
                               <div>
-                                    <h4>Keterangan</h4><br>
+                                    <h4>Keterangan (Gender Perempuan)</h4><br>
                                     <ul>
-                                          <li>Jumlah Responden Sangat Puas :
+                                          <li>Responden Sangat Puas :
                                                 <?php echo htmlspecialchars($genderData['perempuan_sangat_puas']); ?>
+                                                Orang
+                                                (<?php echo number_format(($genderData['perempuan_sangat_puas'] / $genderData['total_responden_perempuan']) * 100,2); ?>%)
                                           </li>
-                                          <li>Jumlah Responden Puas :
+                                          <li>Responden Puas :
                                                 <?php echo htmlspecialchars($genderData['perempuan_puas']); ?>
+                                                Orang
+                                                (<?php echo number_format(($genderData['perempuan_puas'] / $genderData['total_responden_perempuan']) * 100,2); ?>%)
                                           </li>
-                                          <li>Jumlah Responden Kurang Puas :
+                                          <li>Responden Kurang Puas :
                                                 <?php echo htmlspecialchars($genderData['perempuan_kurang_puas']); ?>
+                                                Orang
+                                                (<?php echo number_format(($genderData['perempuan_kurang_puas'] / $genderData['total_responden_perempuan']) * 100,2); ?>%)
                                           </li>
-                                          <li>Jumlah Responden Sangat Kurang Puas :
+                                          <li>Responden Sangat Kurang Puas :
                                                 <?php echo htmlspecialchars($genderData['perempuan_sangat_kurang_puas']); ?>
+                                                Orang
+                                                (<?php echo number_format(($genderData['perempuan_sangat_kurang_puas'] / $genderData['total_responden_perempuan']) * 100,2); ?>%)
                                           </li>
                                     </ul>
                               </div>
@@ -443,19 +459,27 @@ mysqli_close($conn);
                         <div class="chart-area">
                               <canvas id="18_35"></canvas>
                               <div>
-                                    <h4>Keterangan</h4><br>
+                                    <h4>Keterangan (Usia 18-45 Tahun)</h4><br>
                                     <ul>
-                                          <li>Jumlah Responden Sangat Puas :
+                                          <li>Responden Sangat Puas :
                                                 <?php echo htmlspecialchars($usiaData['18_35_sangat_puas']); ?>
+                                                Orang
+                                                (<?php echo number_format(($usiaData['18_35_sangat_puas'] / $usiaData['total_responden_18_35']) * 100,2); ?>%)
                                           </li>
-                                          <li>Jumlah Responden Puas :
+                                          <li>Responden Puas :
                                                 <?php echo htmlspecialchars($usiaData['18_35_puas']); ?>
+                                                Orang
+                                                (<?php echo number_format(($usiaData['18_35_puas'] / $usiaData['total_responden_18_35']) * 100,2); ?>%)
                                           </li>
-                                          <li>Jumlah Responden Kurang Puas :
+                                          <li>Responden Kurang Puas :
                                                 <?php echo htmlspecialchars($usiaData['18_35_kurang_puas']); ?>
+                                                Orang
+                                                (<?php echo number_format(($usiaData['18_35_kurang_puas'] / $usiaData['total_responden_18_35']) * 100,2); ?>%)
                                           </li>
-                                          <li>Jumlah Responden Sangat Kurang Puas :
+                                          <li>Responden Sangat Kurang Puas :
                                                 <?php echo htmlspecialchars($usiaData['18_35_sangat_kurang_puas']); ?>
+                                                Orang
+                                                (<?php echo number_format(($usiaData['18_35_sangat_kurang_puas'] / $usiaData['total_responden_18_35']) * 100,2); ?>%)
                                           </li>
                                     </ul>
                               </div>
@@ -463,18 +487,27 @@ mysqli_close($conn);
                         <div class="chart-area">
                               <canvas id="36_up"></canvas>
                               <div>
-                                    <h4>Keterangan</h4><br>
+                                    <h4>Keterangan (Usia 36 Tahun Keatas)</h4><br>
                                     <ul>
-                                          <li>Jumlah Responden Sangat Puas :
+                                          <li>Responden Sangat Puas :
                                                 <?php echo htmlspecialchars($usiaData['36_up_sangat_puas']); ?>
+                                                Orang
+                                                (<?php echo number_format(($usiaData['36_up_sangat_puas'] / $usiaData['total_responden_36_up']) * 100,2); ?>%)
                                           </li>
-                                          <li>Jumlah Responden Puas :
-                                                <?php echo htmlspecialchars($usiaData['36_up_puas']); ?></li>
-                                          <li>Jumlah Responden Kurang Puas :
+                                          <li>Responden Puas :
+                                                <?php echo htmlspecialchars($usiaData['36_up_puas']); ?>
+                                                Orang
+                                                (<?php echo number_format(($usiaData['36_up_puas'] / $usiaData['total_responden_36_up']) * 100,2); ?>%)
+                                          </li>
+                                          <li>Responden Kurang Puas :
                                                 <?php echo htmlspecialchars($usiaData['36_up_kurang_puas']); ?>
+                                                Orang
+                                                (<?php echo number_format(($usiaData['36_up_kurang_puas'] / $usiaData['total_responden_36_up']) * 100,2); ?>%)
                                           </li>
-                                          <li>Jumlah Responden Sangat Kurang Puas :
+                                          <li>Responden Sangat Kurang Puas :
                                                 <?php echo htmlspecialchars($usiaData['36_up_sangat_kurang_puas']); ?>
+                                                Orang
+                                                (<?php echo number_format(($usiaData['36_up_sangat_kurang_puas'] / $usiaData['total_responden_36_up']) * 100,2); ?>%)
                                           </li>
                                     </ul>
                               </div>
@@ -485,19 +518,27 @@ mysqli_close($conn);
                         <div class="chart-area">
                               <canvas id="sd"></canvas>
                               <div>
-                                    <h4>Keterangan</h4><br>
+                                    <h4>Keterangan (Lulusan SD)</h4><br>
                                     <ul>
-                                          <li>Jumlah Responden Sangat Puas :
+                                          <li>Responden Sangat Puas :
                                                 <?php echo htmlspecialchars($lulusanData['sd_sangat_puas']); ?>
+                                                Orang
+                                                (<?php echo number_format(($lulusanData['sd_sangat_puas'] / $lulusanData['total_responden_sd']) * 100,2); ?>%)
                                           </li>
-                                          <li>Jumlah Responden Puas :
+                                          <li>Responden Puas :
                                                 <?php echo htmlspecialchars($lulusanData['sd_puas']); ?>
+                                                Orang
+                                                (<?php echo number_format(($lulusanData['sd_puas'] / $lulusanData['total_responden_sd']) * 100,2); ?>%)
                                           </li>
-                                          <li>Jumlah Responden Kurang Puas :
+                                          <li>Responden Kurang Puas :
                                                 <?php echo htmlspecialchars($lulusanData['sd_kurang_puas']); ?>
+                                                Orang
+                                                (<?php echo number_format(($lulusanData['sd_kurang_puas'] / $lulusanData['total_responden_sd']) * 100,2); ?>%)
                                           </li>
-                                          <li>Jumlah Responden Sangat Kurang Puas :
+                                          <li>Responden Sangat Kurang Puas :
                                                 <?php echo htmlspecialchars($lulusanData['sd_sangat_kurang_puas']); ?>
+                                                Orang
+                                                (<?php echo number_format(($lulusanData['sd_sangat_kurang_puas'] / $lulusanData['total_responden_sd']) * 100,2); ?>%)
                                           </li>
                                     </ul>
                               </div>
@@ -505,18 +546,27 @@ mysqli_close($conn);
                         <div class="chart-area">
                               <canvas id="smp"></canvas>
                               <div>
-                                    <h4>Keterangan</h4><br>
+                                    <h4>Keterangan (Lulusan SMP)</h4><br>
                                     <ul>
-                                          <li>Jumlah Responden Sangat Puas :
+                                          <li>Responden Sangat Puas :
                                                 <?php echo htmlspecialchars($lulusanData['smp_sangat_puas']); ?>
+                                                Orang
+                                                (<?php echo number_format(($lulusanData['smp_sangat_puas'] / $lulusanData['total_responden_smp']) * 100,2); ?>%)
                                           </li>
-                                          <li>Jumlah Responden Puas :
-                                                <?php echo htmlspecialchars($lulusanData['smp_puas']); ?></li>
-                                          <li>Jumlah Responden Kurang Puas :
+                                          <li>Responden Puas :
+                                                <?php echo htmlspecialchars($lulusanData['smp_puas']); ?>
+                                                Orang
+                                                (<?php echo number_format(($lulusanData['smp_puas'] / $lulusanData['total_responden_smp']) * 100,2); ?>%)
+                                          </li>
+                                          <li>Responden Kurang Puas :
                                                 <?php echo htmlspecialchars($lulusanData['smp_kurang_puas']); ?>
+                                                Orang
+                                                (<?php echo number_format(($lulusanData['smp_kurang_puas'] / $lulusanData['total_responden_smp']) * 100,2); ?>%)
                                           </li>
-                                          <li>Jumlah Responden Sangat Kurang Puas :
+                                          <li>Responden Sangat Kurang Puas :
                                                 <?php echo htmlspecialchars($lulusanData['smp_sangat_kurang_puas']); ?>
+                                                Orang
+                                                (<?php echo number_format(($lulusanData['smp_sangat_kurang_puas'] / $lulusanData['total_responden_smp']) * 100,2); ?>%)
                                           </li>
                                     </ul>
                               </div>
@@ -524,18 +574,27 @@ mysqli_close($conn);
                         <div class="chart-area">
                               <canvas id="sma"></canvas>
                               <div>
-                                    <h4>Keterangan</h4><br>
+                                    <h4>Keterangan (Lulusan SMA)</h4><br>
                                     <ul>
-                                          <li>Jumlah Responden Sangat Puas :
+                                          <li>Responden Sangat Puas :
                                                 <?php echo htmlspecialchars($lulusanData['sma_sangat_puas']); ?>
+                                                Orang
+                                                (<?php echo number_format(($lulusanData['sma_sangat_puas'] / $lulusanData['total_responden_sma']) * 100,2); ?>%)
                                           </li>
-                                          <li>Jumlah Responden Puas :
-                                                <?php echo htmlspecialchars($lulusanData['sma_puas']); ?></li>
-                                          <li>Jumlah Responden Kurang Puas :
+                                          <li>Responden Puas :
+                                                <?php echo htmlspecialchars($lulusanData['sma_puas']); ?>
+                                                Orang
+                                                (<?php echo number_format(($lulusanData['sma_puas'] / $lulusanData['total_responden_sma']) * 100,2); ?>%)
+                                          </li>
+                                          <li>Responden Kurang Puas :
                                                 <?php echo htmlspecialchars($lulusanData['sma_kurang_puas']); ?>
+                                                Orang
+                                                (<?php echo number_format(($lulusanData['sma_kurang_puas'] / $lulusanData['total_responden_sma']) * 100,2); ?>%)
                                           </li>
-                                          <li>Jumlah Responden Sangat Kurang Puas :
+                                          <li>Responden Sangat Kurang Puas :
                                                 <?php echo htmlspecialchars($lulusanData['sma_sangat_kurang_puas']); ?>
+                                                Orang
+                                                (<?php echo number_format(($lulusanData['sma_sangat_kurang_puas'] / $lulusanData['total_responden_sma']) * 100,2); ?>%)
                                           </li>
                                     </ul>
                               </div>
@@ -543,18 +602,27 @@ mysqli_close($conn);
                         <div class="chart-area">
                               <canvas id="diploma"></canvas>
                               <div>
-                                    <h4>Keterangan</h4><br>
+                                    <h4>Keterangan (Lulusan Diploma)</h4><br>
                                     <ul>
-                                          <li>Jumlah Responden Sangat Puas :
+                                          <li>Responden Sangat Puas :
                                                 <?php echo htmlspecialchars($lulusanData['diploma_sangat_puas']); ?>
+                                                Orang
+                                                (<?php echo number_format(($lulusanData['diploma_sangat_puas'] / $lulusanData['total_responden_diploma']) * 100,2); ?>%)
                                           </li>
-                                          <li>Jumlah Responden Puas :
-                                                <?php echo htmlspecialchars($lulusanData['diploma_puas']); ?></li>
-                                          <li>Jumlah Responden Kurang Puas :
+                                          <li>Responden Puas :
+                                                <?php echo htmlspecialchars($lulusanData['diploma_puas']); ?>
+                                                Orang
+                                                (<?php echo number_format(($lulusanData['diploma_puas'] / $lulusanData['total_responden_diploma']) * 100,2); ?>%)
+                                          </li>
+                                          <li>Responden Kurang Puas :
                                                 <?php echo htmlspecialchars($lulusanData['diploma_kurang_puas']); ?>
+                                                Orang
+                                                (<?php echo number_format(($lulusanData['diploma_kurang_puas'] / $lulusanData['total_responden_diploma']) * 100,2); ?>%)
                                           </li>
-                                          <li>Jumlah Responden Sangat Kurang Puas :
+                                          <li>Responden Sangat Kurang Puas :
                                                 <?php echo htmlspecialchars($lulusanData['diploma_sangat_kurang_puas']); ?>
+                                                Orang
+                                                (<?php echo number_format(($lulusanData['diploma_sangat_kurang_puas'] / $lulusanData['total_responden_diploma']) * 100,2); ?>%)
                                           </li>
                                     </ul>
                               </div>
@@ -562,18 +630,27 @@ mysqli_close($conn);
                         <div class="chart-area">
                               <canvas id="sarjana"></canvas>
                               <div>
-                                    <h4>Keterangan</h4><br>
+                                    <h4>Keterangan (Lulusan Sarjana)</h4><br>
                                     <ul>
-                                          <li>Jumlah Responden Sangat Puas :
+                                          <li>Responden Sangat Puas :
                                                 <?php echo htmlspecialchars($lulusanData['sarjana_sangat_puas']); ?>
+                                                Orang
+                                                (<?php echo number_format(($lulusanData['sarjana_sangat_puas'] / $lulusanData['total_responden_sarjana']) * 100,2); ?>%)
                                           </li>
-                                          <li>Jumlah Responden Puas :
-                                                <?php echo htmlspecialchars($lulusanData['sarjana_puas']); ?></li>
-                                          <li>Jumlah Responden Kurang Puas :
+                                          <li>Responden Puas :
+                                                <?php echo htmlspecialchars($lulusanData['sarjana_puas']); ?>
+                                                Orang
+                                                (<?php echo number_format(($lulusanData['sarjana_puas'] / $lulusanData['total_responden_sarjana']) * 100,2); ?>%)
+                                          </li>
+                                          <li>Responden Kurang Puas :
                                                 <?php echo htmlspecialchars($lulusanData['sarjana_kurang_puas']); ?>
+                                                Orang
+                                                (<?php echo number_format(($lulusanData['sarjana_kurang_puas'] / $lulusanData['total_responden_sarjana']) * 100,2); ?>%)
                                           </li>
-                                          <li>Jumlah Responden Sangat Kurang Puas :
+                                          <li>Responden Sangat Kurang Puas :
                                                 <?php echo htmlspecialchars($lulusanData['sarjana_sangat_kurang_puas']); ?>
+                                                Orang
+                                                (<?php echo number_format(($lulusanData['sarjana_sangat_kurang_puas'] / $lulusanData['total_responden_sarjana']) * 100,2); ?>%)
                                           </li>
                                     </ul>
                               </div>
@@ -584,19 +661,27 @@ mysqli_close($conn);
                         <div class="chart-area">
                               <canvas id="pns"></canvas>
                               <div>
-                                    <h4>Keterangan</h4><br>
+                                    <h4>Keterangan (Profesi PNS)</h4><br>
                                     <ul>
-                                          <li>Jumlah Responden Sangat Puas :
+                                          <li>Responden Sangat Puas :
                                                 <?php echo htmlspecialchars($profesiData['pns_sangat_puas']); ?>
+                                                Orang
+                                                (<?php echo number_format(($profesiData['pns_sangat_puas'] / $profesiData['total_responden_pns']) * 100,2); ?>%)
                                           </li>
-                                          <li>Jumlah Responden Puas :
+                                          <li>Responden Puas :
                                                 <?php echo htmlspecialchars($profesiData['pns_puas']); ?>
+                                                Orang
+                                                (<?php echo number_format(($profesiData['pns_puas'] / $profesiData['total_responden_pns']) * 100,2); ?>%)
                                           </li>
-                                          <li>Jumlah Responden Kurang Puas :
+                                          <li>Responden Kurang Puas :
                                                 <?php echo htmlspecialchars($profesiData['pns_kurang_puas']); ?>
+                                                Orang
+                                                (<?php echo number_format(($profesiData['pns_kurang_puas'] / $profesiData['total_responden_pns']) * 100,2); ?>%)
                                           </li>
-                                          <li>Jumlah Responden Sangat Kurang Puas :
+                                          <li>Responden Sangat Kurang Puas :
                                                 <?php echo htmlspecialchars($profesiData['pns_sangat_kurang_puas']); ?>
+                                                Orang
+                                                (<?php echo number_format(($profesiData['pns_sangat_kurang_puas'] / $profesiData['total_responden_pns']) * 100,2); ?>%)
                                           </li>
                                     </ul>
                               </div>
@@ -604,19 +689,27 @@ mysqli_close($conn);
                         <div class="chart-area">
                               <canvas id="swasta_wiraswasta"></canvas>
                               <div>
-                                    <h4>Keterangan</h4><br>
+                                    <h4>Keterangan (Profesi Swasta & Wiraswasta)</h4><br>
                                     <ul>
-                                          <li>Jumlah Responden Sangat Puas :
+                                          <li>Responden Sangat Puas :
                                                 <?php echo htmlspecialchars($profesiData['swasta_wiraswasta_sangat_puas']); ?>
+                                                Orang
+                                                (<?php echo number_format(($profesiData['swasta_wiraswasta_sangat_puas'] / $profesiData['total_responden_swasta_wiraswasta']) * 100,2); ?>%)
                                           </li>
-                                          <li>Jumlah Responden Puas :
+                                          <li>Responden Puas :
                                                 <?php echo htmlspecialchars($profesiData['swasta_wiraswasta_puas']); ?>
+                                                Orang
+                                                (<?php echo number_format(($profesiData['swasta_wiraswasta_puas'] / $profesiData['total_responden_swasta_wiraswasta']) * 100,2); ?>%)
                                           </li>
-                                          <li>Jumlah Responden Kurang Puas :
+                                          <li>Responden Kurang Puas :
                                                 <?php echo htmlspecialchars($profesiData['swasta_wiraswasta_kurang_puas']); ?>
+                                                Orang
+                                                (<?php echo number_format(($profesiData['swasta_wiraswasta_kurang_puas'] / $profesiData['total_responden_swasta_wiraswasta']) * 100,2); ?>%)
                                           </li>
-                                          <li>Jumlah Responden Sangat Kurang Puas :
+                                          <li>Responden Sangat Kurang Puas :
                                                 <?php echo htmlspecialchars($profesiData['swasta_wiraswasta_sangat_kurang_puas']); ?>
+                                                Orang
+                                                (<?php echo number_format(($profesiData['swasta_wiraswasta_sangat_kurang_puas'] / $profesiData['total_responden_swasta_wiraswasta']) * 100,2); ?>%)
                                           </li>
                                     </ul>
                               </div>
@@ -624,19 +717,27 @@ mysqli_close($conn);
                         <div class="chart-area">
                               <canvas id="pelajar_mahasiswa"></canvas>
                               <div>
-                                    <h4>Keterangan</h4><br>
+                                    <h4>Keterangan (Profesi Pelajar & Mahasiswa)</h4><br>
                                     <ul>
-                                          <li>Jumlah Responden Sangat Puas :
+                                          <li>Responden Sangat Puas :
                                                 <?php echo htmlspecialchars($profesiData['pelajar_mahasiswa_sangat_puas']); ?>
+                                                Orang
+                                                (<?php echo number_format(($profesiData['pelajar_mahasiswa_sangat_puas'] / $profesiData['total_responden_pelajar_mahasiswa']) * 100,2); ?>%)
                                           </li>
-                                          <li>Jumlah Responden Puas :
+                                          <li>Responden Puas :
                                                 <?php echo htmlspecialchars($profesiData['pelajar_mahasiswa_puas']); ?>
+                                                Orang
+                                                (<?php echo number_format(($profesiData['pelajar_mahasiswa_puas'] / $profesiData['total_responden_pelajar_mahasiswa']) * 100,2); ?>%)
                                           </li>
-                                          <li>Jumlah Responden Kurang Puas :
+                                          <li>Responden Kurang Puas :
                                                 <?php echo htmlspecialchars($profesiData['pelajar_mahasiswa_kurang_puas']); ?>
+                                                Orang
+                                                (<?php echo number_format(($profesiData['pelajar_mahasiswa_kurang_puas'] / $profesiData['total_responden_pelajar_mahasiswa']) * 100,2); ?>%)
                                           </li>
-                                          <li>Jumlah Responden Sangat Kurang Puas :
+                                          <li>Responden Sangat Kurang Puas :
                                                 <?php echo htmlspecialchars($profesiData['pelajar_mahasiswa_sangat_kurang_puas']); ?>
+                                                Orang
+                                                (<?php echo number_format(($profesiData['pelajar_mahasiswa_sangat_kurang_puas'] / $profesiData['total_responden_pelajar_mahasiswa']) * 100,2); ?>%)
                                           </li>
                                     </ul>
                               </div>
@@ -644,19 +745,27 @@ mysqli_close($conn);
                         <div class="chart-area">
                               <canvas id="pengangguran"></canvas>
                               <div>
-                                    <h4>Keterangan</h4><br>
+                                    <h4>Keterangan (Profesi Pengaggurann)</h4><br>
                                     <ul>
-                                          <li>Jumlah Responden Sangat Puas :
+                                          <li>Responden Sangat Puas :
                                                 <?php echo htmlspecialchars($profesiData['pengangguran_sangat_puas']); ?>
+                                                Orang
+                                                (<?php echo number_format(($profesiData['pengangguran_sangat_puas'] / $profesiData['total_responden_pengangguran']) * 100,2); ?>%)
                                           </li>
-                                          <li>Jumlah Responden Puas :
+                                          <li>Responden Puas :
                                                 <?php echo htmlspecialchars($profesiData['pengangguran_puas']); ?>
+                                                Orang
+                                                (<?php echo number_format(($profesiData['pengangguran_puas'] / $profesiData['total_responden_pengangguran']) * 100,2); ?>%)
                                           </li>
-                                          <li>Jumlah Responden Kurang Puas :
+                                          <li>Responden Kurang Puas :
                                                 <?php echo htmlspecialchars($profesiData['pengangguran_kurang_puas']); ?>
+                                                Orang
+                                                (<?php echo number_format(($profesiData['pengangguran_kurang_puas'] / $profesiData['total_responden_pengangguran']) * 100,2); ?>%)
                                           </li>
-                                          <li>Jumlah Responden Sangat Kurang Puas :
+                                          <li>Responden Sangat Kurang Puas :
                                                 <?php echo htmlspecialchars($profesiData['pengangguran_sangat_kurang_puas']); ?>
+                                                Orang
+                                                (<?php echo number_format(($profesiData['pengangguran_sangat_kurang_puas'] / $profesiData['total_responden_pengangguran']) * 100,2); ?>%)
                                           </li>
                                     </ul>
                               </div>
@@ -681,7 +790,7 @@ mysqli_close($conn);
                   data: {
                         labels: ['Sangat Puas', 'Puas', 'Kurang Puas', 'Sangat Kurang Puas'],
                         datasets: [{
-                              label: 'Jumlah Responden',
+                              label: 'Responden',
                               data: dataValues,
                               borderWidth: 1,
                               backgroundColor: [
@@ -955,130 +1064,130 @@ mysqli_close($conn);
                         id: 'laki_laki',
                         label: 'Keterangan :',
                         keterangan: [
-                              '\u2022 Jumlah Responden Sangat Puas: <?php echo htmlspecialchars($genderData['laki_laki_sangat_puas']); ?> Orang',
-                              '\u2022 Jumlah Responden Puas: <?php echo htmlspecialchars($genderData['laki_laki_puas']); ?> Orang',
-                              '\u2022 Jumlah Responden Kurang Puas: <?php echo htmlspecialchars($genderData['laki_laki_kurang_puas']); ?> Orang',
-                              '\u2022 Jumlah Responden Sangat Kurang Puas: <?php echo htmlspecialchars($genderData['laki_laki_sangat_kurang_puas']); ?> Orang'
+                              '\u2022 Responden Sangat Puas: <?php echo htmlspecialchars($genderData['laki_laki_sangat_puas']); ?> Orang  (<?php echo number_format(($genderData['laki_laki_sangat_puas'] / $genderData['total_responden_laki_laki']) * 100,2); ?>%)',
+                              '\u2022 Responden Puas: <?php echo htmlspecialchars($genderData['laki_laki_puas']); ?> Orang  (<?php echo number_format(($genderData['laki_laki_puas'] / $genderData['total_responden_laki_laki']) * 100,2); ?>%)',
+                              '\u2022 Responden Kurang Puas: <?php echo htmlspecialchars($genderData['laki_laki_kurang_puas']); ?> Orang  (<?php echo number_format(($genderData['laki_laki_kurang_puas'] / $genderData['total_responden_laki_laki']) * 100,2); ?>%)',
+                              '\u2022 Responden Sangat Kurang Puas: <?php echo htmlspecialchars($genderData['laki_laki_sangat_kurang_puas']); ?> Orang  (<?php echo number_format(($genderData['laki_laki_sangat_kurang_puas'] / $genderData['total_responden_laki_laki']) * 100,2); ?>%)'
                         ]
                   },
                   {
                         id: 'perempuan',
                         label: 'Keterangan :',
                         keterangan: [
-                              '\u2022 Jumlah Responden Sangat Puas: <?php echo htmlspecialchars($genderData['perempuan_sangat_puas']); ?> Orang',
-                              '\u2022 Jumlah Responden Puas: <?php echo htmlspecialchars($genderData['perempuan_puas']); ?> Orang',
-                              '\u2022 Jumlah Responden Kurang Puas: <?php echo htmlspecialchars($genderData['perempuan_kurang_puas']); ?> Orang',
-                              '\u2022 Jumlah Responden Sangat Kurang Puas: <?php echo htmlspecialchars($genderData['perempuan_sangat_kurang_puas']); ?> Orang'
+                              '\u2022 Responden Sangat Puas: <?php echo htmlspecialchars($genderData['perempuan_sangat_puas']); ?> Orang  (<?php echo number_format(($genderData['perempuan_sangat_puas'] / $genderData['total_responden_perempuan']) * 100,2); ?>%)',
+                              '\u2022 Responden Puas: <?php echo htmlspecialchars($genderData['perempuan_puas']); ?> Orang  (<?php echo number_format(($genderData['perempuan_puas'] / $genderData['total_responden_perempuan']) * 100,2); ?>%)',
+                              '\u2022 Responden Kurang Puas: <?php echo htmlspecialchars($genderData['perempuan_kurang_puas']); ?> Orang  (<?php echo number_format(($genderData['perempuan_kurang_puas'] / $genderData['total_responden_perempuan']) * 100,2); ?>%)',
+                              '\u2022 Responden Sangat Kurang Puas: <?php echo htmlspecialchars($genderData['perempuan_sangat_kurang_puas']); ?> Orang (<?php echo number_format(($genderData['perempuan_sangat_kurang_puas'] / $genderData['total_responden_perempuan']) * 100,2); ?>%)'
                         ]
                   },
                   {
                         id: '18_35',
                         label: 'Keterangan :',
                         keterangan: [
-                              '\u2022 Jumlah Responden Sangat Puas: <?php echo htmlspecialchars($usiaData['18_35_sangat_puas']); ?> Orang',
-                              '\u2022 Jumlah Responden Puas: <?php echo htmlspecialchars($usiaData['18_35_puas']); ?> Orang',
-                              '\u2022 Jumlah Responden Kurang Puas: <?php echo htmlspecialchars($usiaData['18_35_kurang_puas']); ?> Orang',
-                              '\u2022 Jumlah Responden Sangat Kurang Puas: <?php echo htmlspecialchars($usiaData['18_35_sangat_kurang_puas']); ?> Orang'
+                              '\u2022 Responden Sangat Puas: <?php echo htmlspecialchars($usiaData['18_35_sangat_puas']); ?> Orang  (<?php echo number_format(($usiaData['18_35_sangat_puas'] / $usiaData['total_responden_18_35']) * 100,2); ?>%)',
+                              '\u2022 Responden Puas: <?php echo htmlspecialchars($usiaData['18_35_puas']); ?> Orang  (<?php echo number_format(($usiaData['18_35_puas'] / $usiaData['total_responden_18_35']) * 100,2); ?>%)',
+                              '\u2022 Responden Kurang Puas: <?php echo htmlspecialchars($usiaData['18_35_kurang_puas']); ?> Orang  (<?php echo number_format(($usiaData['18_35_kurang_puas'] / $usiaData['total_responden_18_35']) * 100,2); ?>%)',
+                              '\u2022 Responden Sangat Kurang Puas: <?php echo htmlspecialchars($usiaData['18_35_sangat_kurang_puas']); ?> Orang  (<?php echo number_format(($usiaData['18_35_sangat_kurang_puas'] / $usiaData['total_responden_18_35']) * 100,2); ?>%)'
                         ]
                   },
                   {
                         id: '36_up',
                         label: 'Keterangan :',
                         keterangan: [
-                              '\u2022 Jumlah Responden Sangat Puas: <?php echo htmlspecialchars($usiaData['36_up_sangat_puas']); ?> Orang',
-                              '\u2022 Jumlah Responden Puas: <?php echo htmlspecialchars($usiaData['36_up_puas']); ?> Orang',
-                              '\u2022 Jumlah Responden Kurang Puas: <?php echo htmlspecialchars($usiaData['36_up_kurang_puas']); ?> Orang',
-                              '\u2022 Jumlah Responden Sangat Kurang Puas: <?php echo htmlspecialchars($usiaData['36_up_sangat_kurang_puas']); ?> Orang'
+                              '\u2022 Responden Sangat Puas: <?php echo htmlspecialchars($usiaData['36_up_sangat_puas']); ?> Orang (<?php echo number_format(($usiaData['36_up_sangat_puas'] / $usiaData['total_responden_36_up']) * 100,2); ?>%)',
+                              '\u2022 Responden Puas: <?php echo htmlspecialchars($usiaData['36_up_puas']); ?> Orang  (<?php echo number_format(($usiaData['36_up_puas'] / $usiaData['total_responden_36_up']) * 100,2); ?>%)',
+                              '\u2022 Responden Kurang Puas: <?php echo htmlspecialchars($usiaData['36_up_kurang_puas']); ?> Orang (<?php echo number_format(($usiaData['36_up_kurang_puas'] / $usiaData['total_responden_36_up']) * 100,2); ?>%)',
+                              '\u2022 Responden Sangat Kurang Puas: <?php echo htmlspecialchars($usiaData['36_up_sangat_kurang_puas']); ?> Orang (<?php echo number_format(($usiaData['36_up_sangat_kurang_puas'] / $usiaData['total_responden_36_up']) * 100,2); ?>%)'
                         ]
                   },
                   {
                         id: 'sd',
                         label: 'Keterangan :',
                         keterangan: [
-                              '\u2022 Jumlah Responden Sangat Puas: <?php echo htmlspecialchars($lulusanData['sd_sangat_puas']); ?> Orang',
-                              '\u2022 Jumlah Responden Puas: <?php echo htmlspecialchars($lulusanData['sd_puas']); ?> Orang',
-                              '\u2022 Jumlah Responden Kurang Puas: <?php echo htmlspecialchars($lulusanData['sd_kurang_puas']); ?> Orang',
-                              '\u2022 Jumlah Responden Sangat Kurang Puas: <?php echo htmlspecialchars($lulusanData['sd_sangat_kurang_puas']); ?> Orang'
+                              '\u2022 Responden Sangat Puas: <?php echo htmlspecialchars($lulusanData['sd_sangat_puas']); ?> Orang (<?php echo number_format(($lulusanData['sd_sangat_puas'] / $lulusanData['total_responden_sd']) * 100,2); ?>%)',
+                              '\u2022 Responden Puas: <?php echo htmlspecialchars($lulusanData['sd_puas']); ?> Orang  (<?php echo number_format(($lulusanData['sd_puas'] / $lulusanData['total_responden_sd']) * 100,2); ?>%)',
+                              '\u2022 Responden Kurang Puas: <?php echo htmlspecialchars($lulusanData['sd_kurang_puas']); ?> Orang  (<?php echo number_format(($lulusanData['sd_kurang_puas'] / $lulusanData['total_responden_sd']) * 100,2); ?>%)',
+                              '\u2022 Responden Sangat Kurang Puas: <?php echo htmlspecialchars($lulusanData['sd_sangat_kurang_puas']); ?> Orang  (<?php echo number_format(($lulusanData['sd_sangat_kurang_puas'] / $lulusanData['total_responden_sd']) * 100,2); ?>%)'
                         ]
                   },
                   {
                         id: 'smp',
                         label: 'Keterangan :',
                         keterangan: [
-                              '\u2022 Jumlah Responden Sangat Puas: <?php echo htmlspecialchars($lulusanData['smp_sangat_puas']); ?> Orang',
-                              '\u2022 Jumlah Responden Puas: <?php echo htmlspecialchars($lulusanData['smp_puas']); ?> Orang',
-                              '\u2022 Jumlah Responden Kurang Puas: <?php echo htmlspecialchars($lulusanData['smp_kurang_puas']); ?> Orang',
-                              '\u2022 Jumlah Responden Sangat Kurang Puas: <?php echo htmlspecialchars($lulusanData['smp_sangat_kurang_puas']); ?> Orang'
+                              '\u2022 Responden Sangat Puas: <?php echo htmlspecialchars($lulusanData['smp_sangat_puas']); ?> Orang  (<?php echo number_format(($lulusanData['smp_sangat_puas'] / $lulusanData['total_responden_smp']) * 100,2); ?>%)',
+                              '\u2022 Responden Puas: <?php echo htmlspecialchars($lulusanData['smp_puas']); ?> Orang  (<?php echo number_format(($lulusanData['smp_puas'] / $lulusanData['total_responden_smp']) * 100,2); ?>%)',
+                              '\u2022 Responden Kurang Puas: <?php echo htmlspecialchars($lulusanData['smp_kurang_puas']); ?> Orang  (<?php echo number_format(($lulusanData['smp_kurang_puas'] / $lulusanData['total_responden_smp']) * 100,2); ?>%)',
+                              '\u2022 Responden Sangat Kurang Puas: <?php echo htmlspecialchars($lulusanData['smp_sangat_kurang_puas']); ?> Orang  (<?php echo number_format(($lulusanData['smp_sangat_kurang_puas'] / $lulusanData['total_responden_smp']) * 100,2); ?>%)'
                         ]
                   },
                   {
                         id: 'sma',
                         label: 'Keterangan :',
                         keterangan: [
-                              '\u2022 Jumlah Responden Sangat Puas: <?php echo htmlspecialchars($lulusanData['sma_sangat_puas']); ?> Orang',
-                              '\u2022 Jumlah Responden Puas: <?php echo htmlspecialchars($lulusanData['sma_puas']); ?> Orang',
-                              '\u2022 Jumlah Responden Kurang Puas: <?php echo htmlspecialchars($lulusanData['sma_kurang_puas']); ?> Orang',
-                              '\u2022 Jumlah Responden Sangat Kurang Puas: <?php echo htmlspecialchars($lulusanData['sma_sangat_kurang_puas']); ?> Orang'
+                              '\u2022 Responden Sangat Puas: <?php echo htmlspecialchars($lulusanData['sma_sangat_puas']); ?> Orang   (<?php echo number_format(($lulusanData['sma_sangat_puas'] / $lulusanData['total_responden_sma']) * 100,2); ?>%)',
+                              '\u2022 Responden Puas: <?php echo htmlspecialchars($lulusanData['sma_puas']); ?> Orang  (<?php echo number_format(($lulusanData['sma_puas'] / $lulusanData['total_responden_sma']) * 100,2); ?>%)',
+                              '\u2022 Responden Kurang Puas: <?php echo htmlspecialchars($lulusanData['sma_kurang_puas']); ?> Orang  (<?php echo number_format(($lulusanData['sma_kurang_puas'] / $lulusanData['total_responden_sma']) * 100,2); ?>%)',
+                              '\u2022 Responden Sangat Kurang Puas: <?php echo htmlspecialchars($lulusanData['sma_sangat_kurang_puas']); ?> Orang (<?php echo number_format(($lulusanData['sma_sangat_kurang_puas'] / $lulusanData['total_responden_sma']) * 100,2); ?>%)'
                         ]
                   },
                   {
                         id: 'diploma',
                         label: 'Keterangan :',
                         keterangan: [
-                              '\u2022 Jumlah Responden Sangat Puas: <?php echo htmlspecialchars($lulusanData['diploma_sangat_puas']); ?> Orang',
-                              '\u2022 Jumlah Responden Puas: <?php echo htmlspecialchars($lulusanData['diploma_puas']); ?> Orang',
-                              '\u2022 Jumlah Responden Kurang Puas: <?php echo htmlspecialchars($lulusanData['diploma_kurang_puas']); ?> Orang',
-                              '\u2022 Jumlah Responden Sangat Kurang Puas: <?php echo htmlspecialchars($lulusanData['diploma_sangat_kurang_puas']); ?> Orang'
+                              '\u2022 Responden Sangat Puas: <?php echo htmlspecialchars($lulusanData['diploma_sangat_puas']); ?> Orang (<?php echo number_format(($lulusanData['diploma_sangat_puas'] / $lulusanData['total_responden_diploma']) * 100,2); ?>%)',
+                              '\u2022 Responden Puas: <?php echo htmlspecialchars($lulusanData['diploma_puas']); ?> Orang (<?php echo number_format(($lulusanData['diploma_puas'] / $lulusanData['total_responden_diploma']) * 100,2); ?>%)',
+                              '\u2022 Responden Kurang Puas: <?php echo htmlspecialchars($lulusanData['diploma_kurang_puas']); ?> Orang  (<?php echo number_format(($lulusanData['diploma_kurang_puas'] / $lulusanData['total_responden_diploma']) * 100,2); ?>%)',
+                              '\u2022 Responden Sangat Kurang Puas: <?php echo htmlspecialchars($lulusanData['diploma_sangat_kurang_puas']); ?> Orang (<?php echo number_format(($lulusanData['diploma_sangat_kurang_puas'] / $lulusanData['total_responden_diploma']) * 100,2); ?>%)'
                         ]
                   },
                   {
                         id: 'sarjana',
                         label: 'Keterangan :',
                         keterangan: [
-                              '\u2022 Jumlah Responden Sangat Puas: <?php echo htmlspecialchars($lulusanData['sarjana_sangat_puas']); ?> Orang',
-                              '\u2022 Jumlah Responden Puas: <?php echo htmlspecialchars($lulusanData['sarjana_puas']); ?> Orang',
-                              '\u2022 Jumlah Responden Kurang Puas: <?php echo htmlspecialchars($lulusanData['sarjana_kurang_puas']); ?> Orang',
-                              '\u2022 Jumlah Responden Sangat Kurang Puas: <?php echo htmlspecialchars($lulusanData['sarjana_sangat_kurang_puas']); ?> Orang'
+                              '\u2022 Responden Sangat Puas: <?php echo htmlspecialchars($lulusanData['sarjana_sangat_puas']); ?> Orang  (<?php echo number_format(($lulusanData['sarjana_sangat_puas'] / $lulusanData['total_responden_sarjana']) * 100,2); ?>%)',
+                              '\u2022 Responden Puas: <?php echo htmlspecialchars($lulusanData['sarjana_puas']); ?> Orang  (<?php echo number_format(($lulusanData['sarjana_puas'] / $lulusanData['total_responden_sarjana']) * 100,2); ?>%)',
+                              '\u2022 Responden Kurang Puas: <?php echo htmlspecialchars($lulusanData['sarjana_kurang_puas']); ?> Orang  (<?php echo number_format(($lulusanData['sarjana_kurang_puas'] / $lulusanData['total_responden_sarjana']) * 100,2); ?>%)',
+                              '\u2022 Responden Sangat Kurang Puas: <?php echo htmlspecialchars($lulusanData['sarjana_sangat_kurang_puas']); ?> Orang (<?php echo number_format(($lulusanData['sarjana_sangat_kurang_puas'] / $lulusanData['total_responden_sarjana']) * 100,2); ?>%)'
                         ]
                   },
                   {
                         id: 'pns',
                         label: 'Keterangan :',
                         keterangan: [
-                              '\u2022 Jumlah Responden Sangat Puas: <?php echo htmlspecialchars($profesiData['pns_sangat_puas']); ?> Orang',
-                              '\u2022 Jumlah Responden Puas: <?php echo htmlspecialchars($profesiData['pns_puas']); ?> Orang',
-                              '\u2022 Jumlah Responden Kurang Puas: <?php echo htmlspecialchars($profesiData['pns_kurang_puas']); ?> Orang',
-                              '\u2022 Jumlah Responden Sangat Kurang Puas: <?php echo htmlspecialchars($profesiData['pns_sangat_kurang_puas']); ?> Orang'
+                              '\u2022 Responden Sangat Puas: <?php echo htmlspecialchars($profesiData['pns_sangat_puas']); ?> Orang  (<?php echo number_format(($profesiData['pns_sangat_puas'] / $profesiData['total_responden_pns']) * 100,2); ?>%)',
+                              '\u2022 Responden Puas: <?php echo htmlspecialchars($profesiData['pns_puas']); ?> Orang  (<?php echo number_format(($profesiData['pns_puas'] / $profesiData['total_responden_pns']) * 100,2); ?>%)',
+                              '\u2022 Responden Kurang Puas: <?php echo htmlspecialchars($profesiData['pns_kurang_puas']); ?> Orang  (<?php echo number_format(($profesiData['pns_kurang_puas'] / $profesiData['total_responden_pns']) * 100,2); ?>%)',
+                              '\u2022 Responden Sangat Kurang Puas: <?php echo htmlspecialchars($profesiData['pns_sangat_kurang_puas']); ?> Orang (<?php echo number_format(($profesiData['pns_sangat_kurang_puas'] / $profesiData['total_responden_pns']) * 100,2); ?>%)'
                         ]
                   },
                   {
                         id: 'swasta_wiraswasta',
                         label: 'Keterangan :',
                         keterangan: [
-                              '\u2022 Jumlah Responden Sangat Puas: <?php echo htmlspecialchars($profesiData['swasta_wiraswasta_sangat_puas']); ?> Orang',
-                              '\u2022 Jumlah Responden Puas: <?php echo htmlspecialchars($profesiData['swasta_wiraswasta_puas']); ?> Orang',
-                              '\u2022 Jumlah Responden Kurang Puas: <?php echo htmlspecialchars($profesiData['swasta_wiraswasta_kurang_puas']); ?> Orang',
-                              '\u2022 Jumlah Responden Sangat Kurang Puas: <?php echo htmlspecialchars($profesiData['swasta_wiraswasta_sangat_kurang_puas']); ?> Orang'
+                              '\u2022 Responden Sangat Puas: <?php echo htmlspecialchars($profesiData['swasta_wiraswasta_sangat_puas']); ?> Orang  (<?php echo number_format(($profesiData['swasta_wiraswasta_sangat_puas'] / $profesiData['total_responden_swasta_wiraswasta']) * 100,2); ?>%)',
+                              '\u2022 Responden Puas: <?php echo htmlspecialchars($profesiData['swasta_wiraswasta_puas']); ?> Orang (<?php echo number_format(($profesiData['swasta_wiraswasta_puas'] / $profesiData['total_responden_swasta_wiraswasta']) * 100,2); ?>%)',
+                              '\u2022 Responden Kurang Puas: <?php echo htmlspecialchars($profesiData['swasta_wiraswasta_kurang_puas']); ?> Orang  (<?php echo number_format(($profesiData['swasta_wiraswasta_kurang_puas'] / $profesiData['total_responden_swasta_wiraswasta']) * 100,2); ?>%)',
+                              '\u2022 Responden Sangat Kurang Puas: <?php echo htmlspecialchars($profesiData['swasta_wiraswasta_sangat_kurang_puas']); ?> Orang (<?php echo number_format(($profesiData['swasta_wiraswasta_sangat_kurang_puas'] / $profesiData['total_responden_swasta_wiraswasta']) * 100,2); ?>%)'
                         ]
                   },
                   {
                         id: 'pelajar_mahasiswa',
                         label: 'Keterangan :',
                         keterangan: [
-                              '\u2022 Jumlah Responden Sangat Puas: <?php echo htmlspecialchars($profesiData['pelajar_mahasiswa_sangat_puas']); ?> Orang',
-                              '\u2022 Jumlah Responden Puas: <?php echo htmlspecialchars($profesiData['pelajar_mahasiswa_puas']); ?> Orang',
-                              '\u2022 Jumlah Responden Kurang Puas: <?php echo htmlspecialchars($profesiData['pelajar_mahasiswa_kurang_puas']); ?> Orang',
-                              '\u2022 Jumlah Responden Sangat Kurang Puas: <?php echo htmlspecialchars($profesiData['pelajar_mahasiswa_sangat_kurang_puas']); ?> Orang'
+                              '\u2022 Responden Sangat Puas: <?php echo htmlspecialchars($profesiData['pelajar_mahasiswa_sangat_puas']); ?> Orang  (<?php echo number_format(($profesiData['pelajar_mahasiswa_sangat_puas'] / $profesiData['total_responden_pelajar_mahasiswa']) * 100,2); ?>%)',
+                              '\u2022 Responden Puas: <?php echo htmlspecialchars($profesiData['pelajar_mahasiswa_puas']); ?> Orang (<?php echo number_format(($profesiData['pelajar_mahasiswa_puas'] / $profesiData['total_responden_pelajar_mahasiswa']) * 100,2); ?>%)',
+                              '\u2022 Responden Kurang Puas: <?php echo htmlspecialchars($profesiData['pelajar_mahasiswa_kurang_puas']); ?> Orang  (<?php echo number_format(($profesiData['pelajar_mahasiswa_kurang_puas'] / $profesiData['total_responden_pelajar_mahasiswa']) * 100,2); ?>%)',
+                              '\u2022 Responden Sangat Kurang Puas: <?php echo htmlspecialchars($profesiData['pelajar_mahasiswa_sangat_kurang_puas']); ?> Orang (<?php echo number_format(($profesiData['pelajar_mahasiswa_sangat_kurang_puas'] / $profesiData['total_responden_pelajar_mahasiswa']) * 100,2); ?>%)'
                         ]
                   },
                   {
                         id: 'pengangguran',
                         label: 'Keterangan :',
                         keterangan: [
-                              '\u2022 Jumlah Responden Sangat Puas: <?php echo htmlspecialchars($profesiData['pengangguran_sangat_puas']); ?> Orang',
-                              '\u2022 Jumlah Responden Puas: <?php echo htmlspecialchars($profesiData['pengangguran_puas']); ?> Orang',
-                              '\u2022 Jumlah Responden Kurang Puas: <?php echo htmlspecialchars($profesiData['pengangguran_kurang_puas']); ?> Orang',
-                              '\u2022 Jumlah Responden Sangat Kurang Puas: <?php echo htmlspecialchars($profesiData['pengangguran_sangat_kurang_puas']); ?> Orang'
+                              '\u2022 Responden Sangat Puas: <?php echo htmlspecialchars($profesiData['pengangguran_sangat_puas']); ?> Orang  (<?php echo number_format(($profesiData['pengangguran_sangat_puas'] / $profesiData['total_responden_pengangguran']) * 100,2); ?>%)',
+                              '\u2022 Responden Puas: <?php echo htmlspecialchars($profesiData['pengangguran_puas']); ?> Orang (<?php echo number_format(($profesiData['pengangguran_puas'] / $profesiData['total_responden_pengangguran']) * 100,2); ?>%)',
+                              '\u2022 Responden Kurang Puas: <?php echo htmlspecialchars($profesiData['pengangguran_kurang_puas']); ?> Orang  (<?php echo number_format(($profesiData['pengangguran_kurang_puas'] / $profesiData['total_responden_pengangguran']) * 100,2); ?>%)',
+                              '\u2022 Responden Sangat Kurang Puas: <?php echo htmlspecialchars($profesiData['pengangguran_sangat_kurang_puas']); ?> Orang  (<?php echo number_format(($profesiData['pengangguran_sangat_kurang_puas'] / $profesiData['total_responden_pengangguran']) * 100,2); ?>%)'
                         ]
                   }
             ];

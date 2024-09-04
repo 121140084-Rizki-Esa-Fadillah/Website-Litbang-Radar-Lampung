@@ -20,7 +20,6 @@ $genderPuasPerempuan = isset($_SESSION['gender_puas_perempuan']) ? $_SESSION['ge
 $genderKurangPuasPerempuan = isset($_SESSION['gender_kurang_puas_perempuan']) ? $_SESSION['gender_kurang_puas_perempuan'] : '';
 $genderSangatKurangPuasPerempuan = isset($_SESSION['gender_sangat_kurang_puas_perempuan']) ? $_SESSION['gender_sangat_kurang_puas_perempuan'] : '';
 
-
 // Retrieve age-related data from session
 $usiaSangatPuas18_35 = isset($_SESSION['usia_sangat_puas_18_35']) ? $_SESSION['usia_sangat_puas_18_35'] : '';
 $usiaPuas18_35 = isset($_SESSION['usia_puas_18_35']) ? $_SESSION['usia_puas_18_35'] : '';
@@ -274,8 +273,26 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
       $_SESSION['total_responden_pengangguran'] = $total_responden_pengangguran;
       $_SESSION['total_responden_profesi'] = $total_responden_profesi;
 
-      header('Location: Admin_Tambah_Survey_Hal3.php');
-      exit();
+      // Check if all totals are the same
+      if ($total_responden_gender == $total_responden_usia && $total_responden_gender == $total_responden_lulusan && $total_responden_gender == $total_responden_profesi) {
+            $_SESSION['notification'] = "Data berhasil diinput.";
+            header('Location: Admin_Tambah_Survey_Hal3.php'); // Redirect to the next page since the input is correct
+            exit();     
+      } else {
+            // Prepare an error notification without resetting the session
+            if ($total_responden_gender != $total_responden_usia) {
+            $_SESSION['notification'] = "Data pada tabel usia tidak sama dengan tabel gender.";
+            } elseif ($total_responden_gender !=  $total_responden_lulusan) {
+            $_SESSION['notification'] = "Data pada tabel lulusan tidak sama dengan tabel gender.";
+            } else {
+            $_SESSION['notification'] = "Data pada tabel profesi tidak sama dengan tabel gender.";
+            }
+            // Refresh the page to display the notification
+            echo "<script>
+                  window.location.href = window.location.href; // Refresh the current page
+                  </script>";
+            exit();
+      }
 }
 ?>
 
@@ -288,6 +305,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <title>Tambah Survey - Halaman 2</title>
       <link rel="stylesheet" href="../CSS/Admin_Main.css">
+      <link rel="stylesheet" href="../CSS/notification.css">
       <link rel="stylesheet" href="../CSS/Admin_Tambah_Survey_Hal2.css">
       <script src="https://kit.fontawesome.com/ae643ea90b.js" crossorigin="anonymous"></script>
 </head>
@@ -578,8 +596,10 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                         </button>
                   </div>
             </form>
+            <?php include('notification.php'); ?>
       </main>
       <script src="..\Js\Main.js"></script>
+      <script src="..\Js\notification.js"></script>
 </body>
 
 </html>

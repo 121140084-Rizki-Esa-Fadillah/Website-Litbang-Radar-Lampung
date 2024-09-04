@@ -401,6 +401,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['publish'])) {
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <title>Tambah Survey</title>
       <link rel="stylesheet" href="../CSS/Admin_Main.css">
+      <link rel="stylesheet" href="../CSS/notification.css">
       <link rel="stylesheet" href="../CSS/Admin_Tambah_Survey_Hal3.css">
       <link rel="stylesheet"
             href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
@@ -737,9 +738,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['publish'])) {
                                     class="fa-solid fa-upload"></i>Publish</button>
                   </div>
             </form>
+            <?php include('notification.php'); ?>
       </main>
       <script src="..\Js\Main.js"></script>
       <script src="..\Js\Detail_Survey.js"></script>
+      <script src="..\Js\notification.js"></script>
       <script>
       function createPieChart(ctx, titleText, data) {
             new Chart(ctx, {
